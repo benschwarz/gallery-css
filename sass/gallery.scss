@@ -1,76 +1,55 @@
-$max-images: 3;
-$image-display-duration: 5; //seconds
-$cross-fade-duration: 3; // seconds
-$button-highlight-color: #CCFFCC;
-$display-duration: $cross-fade-duration + $image-display-duration;
+$item-display-duration: 5 !default; //seconds
+$transition-duration: 3 !default; // seconds
+$button-highlight-color: #CCFFCC !default;
+$display-duration: $transition-duration + $item-display-duration;
+$button-highlight-color: green;
 
-@for $i from 2 through $max-images {
-	$total-duration: $display-duration * $i;
+@mixin gallery-start-state    { opacity: 0; }
+@mixin gallery-display-state  { opacity: 1; }
+@mixin gallery-end-state      { opacity: 0; }
 
+@mixin gallery( $item-count ) {
+	$total-duration: $display-duration * $item-count;
 
-	@keyframes controlFade-#{$i} {
+	@keyframes controlFade-#{$item-count} {
 		0% { color: white; }
-	  #{100% * $cross-fade-duration / $total-duration} { color: $button-highlight-color; }
+	  #{100% * $transition-duration / $total-duration} { color: $button-highlight-color; }
 	  #{100% * $display-duration / $total-duration} { color: $button-highlight-color; }
-	  #{100% * ($display-duration + $cross-fade-duration) / $total-duration} { color: white; }
+	  #{100% * ($display-duration + $transition-duration) / $total-duration} { color: white; }
 	}
 
-	@keyframes galleryFade-#{$i} {
-	  0% { opacity: 0; }
-	  #{100% * $cross-fade-duration / $total-duration} { opacity: 1; }
-	  #{100% * $display-duration / $total-duration} { opacity: 1; }
-	  #{100% * ($display-duration + $cross-fade-duration) / $total-duration} { opacity: 0; }
+	@keyframes galleryAnimation-#{$item-count} {
+	  0% { @include gallery-start-state; }
+	  #{100% * $transition-duration / $total-duration} { @include gallery-display-state; }
+	  #{100% * $display-duration / $total-duration} { @include gallery-display-state; }
+	  #{100% * ($display-duration + $transition-duration) / $total-duration} { @include gallery-end-state; }
 	}
 
-	.items-#{$i} {
-		.control-button { animation: controlFade-#{$i} #{$total-duration}s; }
-		.item { animation: galleryFade-#{$i} #{$total-duration}s; }
+	.items-#{$item-count} { 
+		.control-button { animation: controlFade-#{$item-count} #{$total-duration}s infinite; }
+		.item { animation: galleryAnimation-#{$item-count} #{$total-duration}s infinite; }
 
-		@for $j from 1 through $max-images {
-			@if $j <= $i {
+		@for $j from 1 through $item-count {
+			@if $j <= $item-count {
 				.control-operator:nth-of-type(#{$j}):target ~ .controls .control-button:nth-of-type(#{$j}) { color: $button-highlight-color; }
 
 				.control-button:nth-of-type(#{$j}),
 				.item:nth-of-type(#{$j}) { 
-					$delay: #{($j - 1) * ($display-duration) - $cross-fade-duration}s;
+					$delay: #{($j - 1) * ($display-duration) - $transition-duration}s;
 
 					animation-delay: #{$delay};
 				}
 			}
 		}
 	}
-}
+}	
 
 .gallery {
-	position: relative;
-
 	.item:first-of-type { position: static; opacity: 1; }
 	.item { transition: opacity .5s; width: 100%; position: absolute; top: 0; left: 0; opacity: 0; }
 
-	.item, .control-button { animation-iteration-count: infinite; }
 	.control-operator { display: none; } // Stop hash links from scrolling up and down
-	.control-operator:target ~ .item { opacity: 0; animation: none; } // Unselected image
-	.control-operator:target + .item { opacity: 1; } // Selected image
+	.control-operator:target ~ .item { @include gallery-start-state; animation: none; } // Unselected image
+	.control-operator:target + .item { @include gallery-display-state; } // Selected image
 	.control-operator:target ~ .controls .control-button { animation: none; } // Kill button animation when there is a selected image
-}
-
-// control button support
-.gallery {
-	animation: fadeInUp 1s;
-	text-align: center; margin: 0 auto;
-	max-height: 100%;
-
-	.controls { 
-		animation: fadeInUp 2s;
-		position: absolute; bottom: 0; left: 50%; margin-left: -50%; z-index: 2;
-		width: 100%;
-	}
-
-	.control-button {
-		transition: color .1s;
-		font-size: 3em; color: white; text-align: center; text-shadow: 1px 0 1px black;
-
-		&:hover { color: lightGrey; }
-	}
-
 }
