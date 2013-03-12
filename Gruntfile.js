@@ -5,7 +5,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     watch: {
       files: ['sass/*.scss', 'index.html'],
-      tasks: 'sass:dev'
+      tasks: ['sass:dev']
     },
     sass: {
       dist: {
@@ -43,4 +43,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 };
