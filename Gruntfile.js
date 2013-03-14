@@ -27,7 +27,7 @@ module.exports = function(grunt) {
     },
     recess: {
       dist: {
-        src: ['dist/gallery.css', 'dist/gallery.theme.css']
+        src: ['dist/<%= pkg.name %>.css', 'dist/<%= pkg.name %>.theme.css']
       }
     },
     rework: {
@@ -44,12 +44,12 @@ module.exports = function(grunt) {
     },
     cssmin: {
       unprefixed: {
-        src: 'dist/gallery.css',
-        dest: 'dist/gallery.min.css'
+        src: 'dist/<%= pkg.name %>.css',
+        dest: 'dist/<%= pkg.name %>.min.css'
       },
       prefixed: {
-        src: 'dist/gallery.prefixed.css',
-        dest: 'dist/gallery.prefixed.min.css'
+        src: 'dist/<%= pkg.name %>.prefixed.css',
+        dest: 'dist/<%= pkg.name %>.prefixed.min.css'
       }
     }
   });
