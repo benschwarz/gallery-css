@@ -15,18 +15,18 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {
-          'css/<%= pkg.name %>.css': 'sass/<%= pkg.name %>.build.scss',
-          'css/<%= pkg.name %>.theme.css': 'sass/<%= pkg.name %>.theme.scss'
+          'dist/<%= pkg.name %>.css': 'sass/<%= pkg.name %>.build.scss',
+          'dist/<%= pkg.name %>.theme.css': 'sass/<%= pkg.name %>.theme.scss'
         }
       }
     },
     csslint: {
       dist: {
-        src: ['css/*.css']
+        src: ['dist/*.css']
       }
     },
     rework: {
-      'css/<%= pkg.name %>.prefixed.css': 'css/<%= pkg.name %>.css',
+      'dist/<%= pkg.name %>.prefixed.css': 'dist/<%= pkg.name %>.css',
       options: {
         use: [
           ['rework.keyframes'],
@@ -39,12 +39,12 @@ module.exports = function(grunt) {
     },
     cssmin: {
       unprefixed: {
-        src: 'css/gallery.css',
-        dest: 'css/gallery.min.css'
+        src: 'dist/gallery.css',
+        dest: 'dist/gallery.min.css'
       },
       prefixed: {
-        src: 'css/gallery.prefixed.css',
-        dest: 'css/gallery.prefixed.min.css'
+        src: 'dist/gallery.prefixed.css',
+        dest: 'dist/gallery.prefixed.min.css'
       }
     }
   });

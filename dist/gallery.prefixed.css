@@ -1,0 +1,773 @@
+.gallery .item:first-of-type {
+  opacity: 1;
+  position: static
+}
+
+.gallery .item {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -moz-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s
+}
+
+.gallery .control-operator {
+  display: none
+}
+
+.gallery .control-operator:target ~ .item {
+  opacity: 0;
+  -moz-animation: none;
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none
+}
+
+.gallery .control-operator:target + .item {
+  opacity: 1
+}
+
+.gallery .control-operator:target ~ .controls .control-button {
+  -moz-animation: none;
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none
+}
+
+@keyframes controlFade-2 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  14.28571%, 50% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  64.28571% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@keyframes galleryAnimation-2 {
+  0% {
+    opacity: 0
+  }
+
+  14.28571%, 50% {
+    opacity: 1
+  }
+
+  64.28571% {
+    opacity: 0
+  }
+}
+
+.items-2 .control-button {
+  -moz-animation: controlFade-2 14s infinite;
+  -webkit-animation: controlFade-2 14s infinite;
+  -o-animation: controlFade-2 14s infinite;
+  animation: controlFade-2 14s infinite
+}
+
+.items-2 .item {
+  -moz-animation: galleryAnimation-2 14s infinite;
+  -webkit-animation: galleryAnimation-2 14s infinite;
+  -o-animation: galleryAnimation-2 14s infinite;
+  animation: galleryAnimation-2 14s infinite
+}
+
+.items-2 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.items-2 .control-button:nth-of-type(1),
+.items-2 .item:nth-of-type(1) {
+  -moz-animation-delay: -2s;
+  -webkit-animation-delay: -2s;
+  -o-animation-delay: -2s;
+  animation-delay: -2s
+}
+
+.items-2 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.items-2 .control-button:nth-of-type(2),
+.items-2 .item:nth-of-type(2) {
+  -moz-animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s
+}
+
+@keyframes controlFade-3 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  9.52381%, 33.33333% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  42.85714% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@keyframes galleryAnimation-3 {
+  0% {
+    opacity: 0
+  }
+
+  9.52381%, 33.33333% {
+    opacity: 1
+  }
+
+  42.85714% {
+    opacity: 0
+  }
+}
+
+.items-3 .control-button {
+  -moz-animation: controlFade-3 21s infinite;
+  -webkit-animation: controlFade-3 21s infinite;
+  -o-animation: controlFade-3 21s infinite;
+  animation: controlFade-3 21s infinite
+}
+
+.items-3 .item {
+  -moz-animation: galleryAnimation-3 21s infinite;
+  -webkit-animation: galleryAnimation-3 21s infinite;
+  -o-animation: galleryAnimation-3 21s infinite;
+  animation: galleryAnimation-3 21s infinite
+}
+
+.items-3 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.items-3 .control-button:nth-of-type(1),
+.items-3 .item:nth-of-type(1) {
+  -moz-animation-delay: -2s;
+  -webkit-animation-delay: -2s;
+  -o-animation-delay: -2s;
+  animation-delay: -2s
+}
+
+.items-3 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.items-3 .control-button:nth-of-type(2),
+.items-3 .item:nth-of-type(2) {
+  -moz-animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s
+}
+
+.items-3 .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.items-3 .control-button:nth-of-type(3),
+.items-3 .item:nth-of-type(3) {
+  -moz-animation-delay: 12s;
+  -webkit-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  animation-delay: 12s
+}
+
+@keyframes controlFade-4 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  7.14286%, 25% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  32.14286% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@keyframes galleryAnimation-4 {
+  0% {
+    opacity: 0
+  }
+
+  7.14286%, 25% {
+    opacity: 1
+  }
+
+  32.14286% {
+    opacity: 0
+  }
+}
+
+.items-4 .control-button {
+  -moz-animation: controlFade-4 28s infinite;
+  -webkit-animation: controlFade-4 28s infinite;
+  -o-animation: controlFade-4 28s infinite;
+  animation: controlFade-4 28s infinite
+}
+
+.items-4 .item {
+  -moz-animation: galleryAnimation-4 28s infinite;
+  -webkit-animation: galleryAnimation-4 28s infinite;
+  -o-animation: galleryAnimation-4 28s infinite;
+  animation: galleryAnimation-4 28s infinite
+}
+
+.items-4 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.items-4 .control-button:nth-of-type(1),
+.items-4 .item:nth-of-type(1) {
+  -moz-animation-delay: -2s;
+  -webkit-animation-delay: -2s;
+  -o-animation-delay: -2s;
+  animation-delay: -2s
+}
+
+.items-4 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.items-4 .control-button:nth-of-type(2),
+.items-4 .item:nth-of-type(2) {
+  -moz-animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s
+}
+
+.items-4 .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.items-4 .control-button:nth-of-type(3),
+.items-4 .item:nth-of-type(3) {
+  -moz-animation-delay: 12s;
+  -webkit-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  animation-delay: 12s
+}
+
+.items-4 .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.items-4 .control-button:nth-of-type(4),
+.items-4 .item:nth-of-type(4) {
+  -moz-animation-delay: 19s;
+  -webkit-animation-delay: 19s;
+  -o-animation-delay: 19s;
+  animation-delay: 19s
+}
+
+@keyframes controlFade-5 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  5.71429%, 20% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  25.71429% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0
+  }
+
+  5.71429%, 20% {
+    opacity: 1
+  }
+
+  25.71429% {
+    opacity: 0
+  }
+}
+
+.items-5 .control-button {
+  -moz-animation: controlFade-5 35s infinite;
+  -webkit-animation: controlFade-5 35s infinite;
+  -o-animation: controlFade-5 35s infinite;
+  animation: controlFade-5 35s infinite
+}
+
+.items-5 .item {
+  -moz-animation: galleryAnimation-5 35s infinite;
+  -webkit-animation: galleryAnimation-5 35s infinite;
+  -o-animation: galleryAnimation-5 35s infinite;
+  animation: galleryAnimation-5 35s infinite
+}
+
+.items-5 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.items-5 .control-button:nth-of-type(1),
+.items-5 .item:nth-of-type(1) {
+  -moz-animation-delay: -2s;
+  -webkit-animation-delay: -2s;
+  -o-animation-delay: -2s;
+  animation-delay: -2s
+}
+
+.items-5 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.items-5 .control-button:nth-of-type(2),
+.items-5 .item:nth-of-type(2) {
+  -moz-animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s
+}
+
+.items-5 .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.items-5 .control-button:nth-of-type(3),
+.items-5 .item:nth-of-type(3) {
+  -moz-animation-delay: 12s;
+  -webkit-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  animation-delay: 12s
+}
+
+.items-5 .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.items-5 .control-button:nth-of-type(4),
+.items-5 .item:nth-of-type(4) {
+  -moz-animation-delay: 19s;
+  -webkit-animation-delay: 19s;
+  -o-animation-delay: 19s;
+  animation-delay: 19s
+}
+
+.items-5 .control-operator:nth-of-type(5):target ~ .controls .control-button:nth-of-type(5) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.items-5 .control-button:nth-of-type(5),
+.items-5 .item:nth-of-type(5) {
+  -moz-animation-delay: 26s;
+  -webkit-animation-delay: 26s;
+  -o-animation-delay: 26s;
+  animation-delay: 26s
+}
+
+@-moz-keyframes controlFade-2 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  14.28571%, 50% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  64.28571% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@-webkit-keyframes controlFade-2 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  14.28571%, 50% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  64.28571% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@-o-keyframes controlFade-2 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  14.28571%, 50% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  64.28571% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@-moz-keyframes galleryAnimation-2 {
+  0% {
+    opacity: 0
+  }
+
+  14.28571%, 50% {
+    opacity: 1
+  }
+
+  64.28571% {
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes galleryAnimation-2 {
+  0% {
+    opacity: 0
+  }
+
+  14.28571%, 50% {
+    opacity: 1
+  }
+
+  64.28571% {
+    opacity: 0
+  }
+}
+
+@-o-keyframes galleryAnimation-2 {
+  0% {
+    opacity: 0
+  }
+
+  14.28571%, 50% {
+    opacity: 1
+  }
+
+  64.28571% {
+    opacity: 0
+  }
+}
+
+@-moz-keyframes controlFade-3 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  9.52381%, 33.33333% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  42.85714% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@-webkit-keyframes controlFade-3 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  9.52381%, 33.33333% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  42.85714% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@-o-keyframes controlFade-3 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  9.52381%, 33.33333% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  42.85714% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@-moz-keyframes galleryAnimation-3 {
+  0% {
+    opacity: 0
+  }
+
+  9.52381%, 33.33333% {
+    opacity: 1
+  }
+
+  42.85714% {
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes galleryAnimation-3 {
+  0% {
+    opacity: 0
+  }
+
+  9.52381%, 33.33333% {
+    opacity: 1
+  }
+
+  42.85714% {
+    opacity: 0
+  }
+}
+
+@-o-keyframes galleryAnimation-3 {
+  0% {
+    opacity: 0
+  }
+
+  9.52381%, 33.33333% {
+    opacity: 1
+  }
+
+  42.85714% {
+    opacity: 0
+  }
+}
+
+@-moz-keyframes controlFade-4 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  7.14286%, 25% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  32.14286% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@-webkit-keyframes controlFade-4 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  7.14286%, 25% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  32.14286% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@-o-keyframes controlFade-4 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  7.14286%, 25% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  32.14286% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@-moz-keyframes galleryAnimation-4 {
+  0% {
+    opacity: 0
+  }
+
+  7.14286%, 25% {
+    opacity: 1
+  }
+
+  32.14286% {
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes galleryAnimation-4 {
+  0% {
+    opacity: 0
+  }
+
+  7.14286%, 25% {
+    opacity: 1
+  }
+
+  32.14286% {
+    opacity: 0
+  }
+}
+
+@-o-keyframes galleryAnimation-4 {
+  0% {
+    opacity: 0
+  }
+
+  7.14286%, 25% {
+    opacity: 1
+  }
+
+  32.14286% {
+    opacity: 0
+  }
+}
+
+@-moz-keyframes controlFade-5 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  5.71429%, 20% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  25.71429% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@-webkit-keyframes controlFade-5 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  5.71429%, 20% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  25.71429% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@-o-keyframes controlFade-5 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+
+  5.71429%, 20% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  25.71429% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4)
+  }
+}
+
+@-moz-keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0
+  }
+
+  5.71429%, 20% {
+    opacity: 1
+  }
+
+  25.71429% {
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0
+  }
+
+  5.71429%, 20% {
+    opacity: 1
+  }
+
+  25.71429% {
+    opacity: 0
+  }
+}
+
+@-o-keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0
+  }
+
+  5.71429%, 20% {
+    opacity: 1
+  }
+
+  25.71429% {
+    opacity: 0
+  }
+}
