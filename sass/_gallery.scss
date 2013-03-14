@@ -1,28 +1,20 @@
-$item-display-duration: 5 !default; //seconds
-$transition-duration: 3 !default; // seconds
-$button-highlight-color: #CCFFCC !default;
-$display-duration: $transition-duration + $item-display-duration;
-$button-highlight-color: green;
-
-@mixin gallery-start-state    { opacity: 0; }
-@mixin gallery-display-state  { opacity: 1; }
-@mixin gallery-end-state      { opacity: 0; }
+@import "variables";
 
 @mixin gallery( $item-count ) {
 	$total-duration: $display-duration * $item-count;
 
 	@keyframes controlFade-#{$item-count} {
-		0% { color: white; }
-	  #{100% * $transition-duration / $total-duration} { color: $button-highlight-color; }
-	  #{100% * $display-duration / $total-duration} { color: $button-highlight-color; }
-	  #{100% * ($display-duration + $transition-duration) / $total-duration} { color: white; }
+		0% { @include button-color; }
+	  #{100% * $transition-duration / $total-duration},
+	  #{100% * $display-duration / $total-duration} { @include button-active-color; }
+	  #{100% * ($display-duration + $transition-duration) / $total-duration} { @include button-color; }
 	}
 
 	@keyframes galleryAnimation-#{$item-count} {
-	  0% { @include gallery-start-state; }
-	  #{100% * $transition-duration / $total-duration} { @include gallery-display-state; }
-	  #{100% * $display-duration / $total-duration} { @include gallery-display-state; }
-	  #{100% * ($display-duration + $transition-duration) / $total-duration} { @include gallery-end-state; }
+	  0% { opacity: 0; }
+	  #{100% * $transition-duration / $total-duration},
+	  #{100% * $display-duration / $total-duration} { opacity: 1; }
+	  #{100% * ($display-duration + $transition-duration) / $total-duration} { opacity: 0; }
 	}
 
 	.items-#{$item-count} { 
@@ -30,26 +22,25 @@ $button-highlight-color: green;
 		.item { animation: galleryAnimation-#{$item-count} #{$total-duration}s infinite; }
 
 		@for $j from 1 through $item-count {
-			@if $j <= $item-count {
-				.control-operator:nth-of-type(#{$j}):target ~ .controls .control-button:nth-of-type(#{$j}) { color: $button-highlight-color; }
+			.control-operator:nth-of-type(#{$j}):target ~ .controls .control-button:nth-of-type(#{$j}) { @include button-active-color; }
 
-				.control-button:nth-of-type(#{$j}),
-				.item:nth-of-type(#{$j}) { 
-					$delay: #{($j - 1) * ($display-duration) - $transition-duration}s;
+			.control-button:nth-of-type(#{$j}),
+			.item:nth-of-type(#{$j}) { 
+				$delay: #{($j - 1) * ($display-duration) - $transition-duration}s;
 
-					animation-delay: #{$delay};
-				}
+				animation-delay: #{$delay};
 			}
 		}
 	}
-}	
+}
 
 .gallery {
-	.item:first-of-type { position: static; opacity: 1; }
+	.item:first-of-type { opacity: 1; position: static; }
 	.item { transition: opacity .5s; width: 100%; position: absolute; top: 0; left: 0; opacity: 0; }
 
 	.control-operator { display: none; } // Stop hash links from scrolling up and down
-	.control-operator:target ~ .item { @include gallery-start-state; animation: none; } // Unselected image
-	.control-operator:target + .item { @include gallery-display-state; } // Selected image
+	
+	.control-operator:target ~ .item { opacity: 0; animation: none; } // Unselected image
+	.control-operator:target + .item { opacity: 1; } // Selected image
 	.control-operator:target ~ .controls .control-button { animation: none; } // Kill button animation when there is a selected image
 }
