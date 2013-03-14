@@ -1,6 +1,6 @@
 # Gallery.css
 
-Gallery.css is an all CSS framework that allows for simple, maintainable and understandable image galleries without the use of heavy Javascript. 
+Gallery.css is all CSS. Think simple, maintainable and understandable image galleries without the use of Javascript. 
 
 ### Getting started
 
