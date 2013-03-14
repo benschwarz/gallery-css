@@ -1,0 +1,11 @@
+{
+  "name": "gallery",
+  "version": "1.0.0",
+  "main": [
+    "./css/gallery.css",
+    "./css/gallery.min.css",
+    "./css/gallery.prefixed.css",
+    "./css/gallery.prefixed.min.css",
+    "./css/gallery.theme./.css"
+  ]
+}
