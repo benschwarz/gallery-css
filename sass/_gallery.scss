@@ -35,8 +35,8 @@
 }
 
 .gallery {
-	.item:first-of-type { opacity: 1; position: static; }
-	.item { transition: opacity .5s; width: 100%; position: absolute; top: 0; left: 0; opacity: 0; }
+	.item:first-of-type { position: static; opacity: 1; }
+	.item { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; transition: opacity .5s; }
 
 	.control-operator { display: none; } // Stop hash links from scrolling up and down
 	

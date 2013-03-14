@@ -11,17 +11,17 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-left: -50%;
   z-index: 2;
   width: 100%;
+  margin-left: -50%;
   text-align: center;
 }
 .gallery .control-button {
-  color: #ccc;
-  color: rgba(255, 255, 255, 0.4);
   display: inline-block;
   margin: 0 0.02em;
   font-size: 3em;
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.4);
   text-align: center;
   text-decoration: none;
   transition: color 0.1s;

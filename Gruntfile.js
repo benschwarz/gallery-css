@@ -25,6 +25,11 @@ module.exports = function(grunt) {
         src: ['dist/*.css']
       }
     },
+    recess: {
+      dist: {
+        src: ['dist/gallery.css', 'dist/gallery.theme.css']
+      }
+    },
     rework: {
       'dist/<%= pkg.name %>.prefixed.css': 'dist/<%= pkg.name %>.css',
       options: {
@@ -50,11 +55,12 @@ module.exports = function(grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', ['sass', 'rework', 'csslint', 'cssmin']);
+  grunt.registerTask('default', ['sass', 'rework', 'csslint', 'recess', 'cssmin']);
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-rework');
+  grunt.loadNpmTasks('grunt-recess');
 };

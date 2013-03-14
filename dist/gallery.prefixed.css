@@ -1,13 +1,13 @@
 .gallery .item:first-of-type {
-  opacity: 1;
-  position: static
+  position: static;
+  opacity: 1
 }
 
 .gallery .item {
-  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   opacity: 0;
   -moz-transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
