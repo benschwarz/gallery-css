@@ -4,10 +4,10 @@
 	$total-duration: $display-duration * $item-count;
 
 	@keyframes controlFade-#{$item-count} {
-		0% { @include button-color; }
+		0% { @include inactive-button; }
 	  #{100% * $transition-duration / $total-duration},
-	  #{100% * $display-duration / $total-duration} { @include button-active-color; }
-	  #{100% * ($display-duration + $transition-duration) / $total-duration} { @include button-color; }
+	  #{100% * $display-duration / $total-duration} { @include active-button; }
+	  #{100% * ($display-duration + $transition-duration) / $total-duration} { @include inactive-button; }
 	}
 
 	@keyframes galleryAnimation-#{$item-count} {
@@ -18,11 +18,11 @@
 	}
 
 	.items-#{$item-count} { 
-		.autoplay & .control-button { animation: controlFade-#{$item-count} #{$total-duration}s infinite; }
-		.autoplay & .item { animation: galleryAnimation-#{$item-count} #{$total-duration}s infinite; }
+		&.autoplay  .control-button { animation: controlFade-#{$item-count} #{$total-duration}s infinite; }
+		&.autoplay .item { animation: galleryAnimation-#{$item-count} #{$total-duration}s infinite; }
 
 		@for $j from 1 through $item-count {
-			.control-operator:nth-of-type(#{$j}):target ~ .controls .control-button:nth-of-type(#{$j}) { @include button-active-color; }
+			.control-operator:nth-of-type(#{$j}):target ~ .controls .control-button:nth-of-type(#{$j}) { @extend %active-button; }
 
 			.control-button:nth-of-type(#{$j}),
 			.item:nth-of-type(#{$j}) { 
@@ -35,8 +35,10 @@
 }
 
 .gallery {
-	.item:first-of-type { position: static; opacity: 1; }
-	.item { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; transition: opacity .5s; }
+	.item:first-of-type { position: static; opacity: 1; } // Set the first item to be visible
+	.item { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .5s; }
+
+	.control-button:first-of-type { @extend %active-button; }
 
 	.control-operator { display: none; } // Stop hash links from scrolling up and down
 	

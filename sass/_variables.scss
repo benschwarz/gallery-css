@@ -2,6 +2,8 @@ $item-display-duration: 5 !default; //seconds
 $transition-duration: 2 !default; // seconds
 $display-duration: $transition-duration + $item-display-duration;
 
-@mixin button-color { color: #ccc; color: rgba(255, 255, 255, .4); }
-@mixin button-hover-color { color: white; color: rgba(255, 255, 255, .8); }
-@mixin button-active-color { @include button-hover-color; }
+@mixin inactive-button { color: #ccc; color: rgba(255, 255, 255, .4); }
+@mixin active-button { color: white; color: rgba(255, 255, 255, .8); }
+
+%inactive-button { @include inactive-button; }
+%active-button { @include active-button; }
