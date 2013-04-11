@@ -16,5 +16,5 @@ results
 npm-debug.log
 node_modules
 
-.sass_cache
-.scssc
+*.sass_cache
+*.scssc
