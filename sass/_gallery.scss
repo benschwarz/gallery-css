@@ -18,8 +18,8 @@
 	}
 
 	.items-#{$item-count} { 
-		.control-button { animation: controlFade-#{$item-count} #{$total-duration}s infinite; }
-		.item { animation: galleryAnimation-#{$item-count} #{$total-duration}s infinite; }
+		.autoplay & .control-button { animation: controlFade-#{$item-count} #{$total-duration}s infinite; }
+		.autoplay & .item { animation: galleryAnimation-#{$item-count} #{$total-duration}s infinite; }
 
 		@for $j from 1 through $item-count {
 			.control-operator:nth-of-type(#{$j}):target ~ .controls .control-button:nth-of-type(#{$j}) { @include button-active-color; }
