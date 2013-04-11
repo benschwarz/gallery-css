@@ -1,0 +1,8 @@
+{
+  "name": "ie-8",
+  "version": "0.0.0",
+  "dependencies": {
+    "prefix-free": "latest",
+    "html5shiv": "~3.6.2"
+  }
+}
