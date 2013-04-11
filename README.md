@@ -18,7 +18,7 @@ I've prepared a screencast that will take you through how to build something lik
 
 ### Browser support
 
-<table>
+<table width="100%" style="text-align: center;">
   <thead>
     <tr>
       <td>Safari</td>
@@ -39,7 +39,6 @@ I've prepared a screencast that will take you through how to build something lik
       <td>✔</td>
     </tr>
   </tbody>
-  <tfoot>
-    <tr><td colspan="6">† - [Absolutely possible](examples/ie-8) using a variety of JS selector shims, although not stricly recommended. (Let it die, kids)</td></tr>
-  </tfoot>
 </table>
+
+† [Absolutely possible](examples/ie-8) using a variety of JS selector shims, although not recommended.
