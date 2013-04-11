@@ -4,7 +4,7 @@
   "devDependencies": {
     "grunt": "0.4.0",
     "grunt-contrib-cssmin": "0.4.1",
-    "grunt-contrib-csslint": "0.1.0",
+    "grunt-contrib-csslint": "0.1.2",
     "grunt-contrib-sass": "0.2.2",
     "grunt-contrib-watch": "0.3.1",
     "grunt-rework": "0.0.3",

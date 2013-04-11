@@ -3,7 +3,7 @@
 @mixin gallery( $item-count ) {
 	$total-duration: $display-duration * $item-count;
 
-	@keyframes controlFade-#{$item-count} {
+	@keyframes controlAnimation-#{$item-count} {
 		0% { @include inactive-button; }
 	  #{100% * $transition-duration / $total-duration},
 	  #{100% * $display-duration / $total-duration} { @include active-button; }
@@ -18,7 +18,7 @@
 	}
 
 	.items-#{$item-count} { 
-		&.autoplay  .control-button { animation: controlFade-#{$item-count} #{$total-duration}s infinite; }
+		&.autoplay .control-button { animation: controlAnimation-#{$item-count} #{$total-duration}s infinite; }
 		&.autoplay .item { animation: galleryAnimation-#{$item-count} #{$total-duration}s infinite; }
 
 		@for $j from 1 through $item-count {

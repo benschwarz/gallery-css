@@ -21,12 +21,18 @@ module.exports = function(grunt) {
       }
     },
     csslint: {
+      options: {
+        csslintrc: '.csslintrc'
+      },
       dist: {
         src: ['dist/*.css']
       }
     },
     recess: {
       dist: {
+        options: {
+          noOverqualifying: false
+        },
         src: ['dist/<%= pkg.name %>.css', 'dist/<%= pkg.name %>.theme.css']
       }
     },
