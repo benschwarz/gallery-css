@@ -2,7 +2,7 @@
 
 Gallery.css is *all* CSS. Think: Simple, maintainable and understandable galleries without the use of Javascript. 
 
-_What? No script!? Why?_ — Gallery css started as an experiment to build interactive, fluid componentry without the need for jQuery, or a jQuery carosel script. Use this library, or don't — either way, hopefully you'll learn from the techniques used within. 
+_What? No script!? Why?_ — Gallery css started as an experiment to build interactive, fluid componentry without the need for jQuery, or a jQuery carousel script. Use this library, or don't — either way, hopefully you'll learn from the techniques used within. 
 
 ### Getting started
 
