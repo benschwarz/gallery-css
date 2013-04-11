@@ -12,8 +12,37 @@ You've got a couple options with how you'd like to use gallery.css:
 
 ### How does it work? 
 
-I've prepared an ebook to describe the interesting details about gallery.css, get yourself a copy.
+I've prepared a screencast that will take you through how to build something like Gallery-css from scratch, theres tonnes of tiny details that I learnt myself while building it. Its $12, you'll learn and it'll help me keep building for the web. How good is that? 
+
+### Browser support
+
+<table>
+  <thead>
+    <tr>
+      <td>Safari</td>
+      <td>Firefox</td>
+      <td>Chrome</td>
+      <td>IE8</td>
+      <td>IE9</td>
+      <td>IE10</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td>✖†</td>
+      <td>✔</td>
+      <td>✔</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr><td colspan="6">† - [Absolutely possible](examples/ie-8) using a variety of selector shims, although not stricly recommended. Use as a guide to learn from.</td></tr>
+  </tfoot>
+</table>
 
 ### FAQ
 
 * Doesn't generating code for each animation sequence add lots of weight to GalleryCSS? 
+* Do I need to build gallery-css for myself?
