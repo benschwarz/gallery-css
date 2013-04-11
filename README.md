@@ -1,6 +1,8 @@
 # Gallery.css
 
-Gallery.css is all CSS. Think simple, maintainable and understandable image galleries without the use of Javascript. 
+Gallery.css is *all* CSS. Think: Simple, maintainable and understandable galleries without the use of Javascript. 
+
+_What? No script!? Why?_ — Gallery css started as an experiment to build interactive, fluid componentry without the need for jQuery, or a jQuery carosel script. Use this library, or don't — either way, hopefully you'll learn from the techniques used within. 
 
 ### Getting started
 
@@ -38,11 +40,6 @@ I've prepared a screencast that will take you through how to build something lik
     </tr>
   </tbody>
   <tfoot>
-    <tr><td colspan="6">† - [Absolutely possible](examples/ie-8) using a variety of selector shims, although not stricly recommended. Use as a guide to learn from.</td></tr>
+    <tr><td colspan="6">† - [Absolutely possible](examples/ie-8) using a variety of JS selector shims, although not stricly recommended. (Let it die, kids)</td></tr>
   </tfoot>
 </table>
-
-### FAQ
-
-* Doesn't generating code for each animation sequence add lots of weight to GalleryCSS? 
-* Do I need to build gallery-css for myself?
