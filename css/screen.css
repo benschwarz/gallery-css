@@ -21,13 +21,13 @@ body, footer[role="contentinfo"] h3, footer[role="contentinfo"] p {
 
 @font-face {
   font-family: "Layout";
-  src: url("./fonts/layout-webfont.eot?") format("eot");
-  src: url("./fonts/layout-webfont.woff") format("woff"), url("./fonts/layout-webfont.ttf") format("truetype"); }
+  src: url("../fonts/layout-webfont.eot?") format("eot");
+  src: url("../fonts/layout-webfont.woff") format("woff"), url("../fonts/layout-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'icomoon';
-  src: url("./fonts/icomoon.eot");
-  src: url("././fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("./fonts/icomoon.woff") format("woff"), url("./fonts/icomoon.ttf") format("truetype"), url("./fonts/icomoon.svg#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot");
+  src: url("../../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
