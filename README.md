@@ -14,7 +14,7 @@ You've got a couple options with how you'd like to use gallery.css:
 
 ### How does it work? 
 
-I've prepared a screencast that will take you through how to build something like Gallery-css from scratch, theres tonnes of tiny details that I learnt myself while building it. Its $12, you'll learn and it'll help me keep building for the web. How good is that? 
+I've [prepared a screencast](http://benschwarz.github.io/gallery-css) that will take you through how to build something like Gallery-css from scratch, theres tonnes of tiny details that I learnt myself while building it. Its $12, you'll learn and it'll help me keep building for the web. How good is that? 
 
 ### Browser support
 
