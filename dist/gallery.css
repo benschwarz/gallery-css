@@ -30,7 +30,7 @@
   animation: none;
 }
 
-@keyframes controlFade-2 {
+@keyframes controlAnimation-2 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4);
@@ -64,7 +64,7 @@
 }
 
 .items-2.autoplay .control-button {
-  animation: controlFade-2 14s infinite;
+  animation: controlAnimation-2 14s infinite;
 }
 .items-2.autoplay .item {
   animation: galleryAnimation-2 14s infinite;
@@ -78,7 +78,7 @@
   animation-delay: 5s;
 }
 
-@keyframes controlFade-3 {
+@keyframes controlAnimation-3 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4);
@@ -112,7 +112,7 @@
 }
 
 .items-3.autoplay .control-button {
-  animation: controlFade-3 21s infinite;
+  animation: controlAnimation-3 21s infinite;
 }
 .items-3.autoplay .item {
   animation: galleryAnimation-3 21s infinite;
@@ -130,7 +130,7 @@
   animation-delay: 12s;
 }
 
-@keyframes controlFade-4 {
+@keyframes controlAnimation-4 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4);
@@ -164,7 +164,7 @@
 }
 
 .items-4.autoplay .control-button {
-  animation: controlFade-4 28s infinite;
+  animation: controlAnimation-4 28s infinite;
 }
 .items-4.autoplay .item {
   animation: galleryAnimation-4 28s infinite;
@@ -186,7 +186,7 @@
   animation-delay: 19s;
 }
 
-@keyframes controlFade-5 {
+@keyframes controlAnimation-5 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4);
@@ -220,7 +220,7 @@
 }
 
 .items-5.autoplay .control-button {
-  animation: controlFade-5 35s infinite;
+  animation: controlAnimation-5 35s infinite;
 }
 .items-5.autoplay .item {
   animation: galleryAnimation-5 35s infinite;

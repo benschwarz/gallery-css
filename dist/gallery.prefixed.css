@@ -1,3 +1,4 @@
+.gallery .control-button:first-of-type,
 .items-2 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),
 .items-2 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),
 .items-3 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),
@@ -57,7 +58,7 @@
   animation: none
 }
 
-@keyframes controlFade-2 {
+@keyframes controlAnimation-2 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -88,14 +89,14 @@
   }
 }
 
-.autoplay .items-2 .control-button {
-  -moz-animation: controlFade-2 14s infinite;
-  -webkit-animation: controlFade-2 14s infinite;
-  -o-animation: controlFade-2 14s infinite;
-  animation: controlFade-2 14s infinite
+.items-2.autoplay .control-button {
+  -moz-animation: controlAnimation-2 14s infinite;
+  -webkit-animation: controlAnimation-2 14s infinite;
+  -o-animation: controlAnimation-2 14s infinite;
+  animation: controlAnimation-2 14s infinite
 }
 
-.autoplay .items-2 .item {
+.items-2.autoplay .item {
   -moz-animation: galleryAnimation-2 14s infinite;
   -webkit-animation: galleryAnimation-2 14s infinite;
   -o-animation: galleryAnimation-2 14s infinite;
@@ -118,7 +119,7 @@
   animation-delay: 5s
 }
 
-@keyframes controlFade-3 {
+@keyframes controlAnimation-3 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -149,14 +150,14 @@
   }
 }
 
-.autoplay .items-3 .control-button {
-  -moz-animation: controlFade-3 21s infinite;
-  -webkit-animation: controlFade-3 21s infinite;
-  -o-animation: controlFade-3 21s infinite;
-  animation: controlFade-3 21s infinite
+.items-3.autoplay .control-button {
+  -moz-animation: controlAnimation-3 21s infinite;
+  -webkit-animation: controlAnimation-3 21s infinite;
+  -o-animation: controlAnimation-3 21s infinite;
+  animation: controlAnimation-3 21s infinite
 }
 
-.autoplay .items-3 .item {
+.items-3.autoplay .item {
   -moz-animation: galleryAnimation-3 21s infinite;
   -webkit-animation: galleryAnimation-3 21s infinite;
   -o-animation: galleryAnimation-3 21s infinite;
@@ -187,7 +188,7 @@
   animation-delay: 12s
 }
 
-@keyframes controlFade-4 {
+@keyframes controlAnimation-4 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -218,14 +219,14 @@
   }
 }
 
-.autoplay .items-4 .control-button {
-  -moz-animation: controlFade-4 28s infinite;
-  -webkit-animation: controlFade-4 28s infinite;
-  -o-animation: controlFade-4 28s infinite;
-  animation: controlFade-4 28s infinite
+.items-4.autoplay .control-button {
+  -moz-animation: controlAnimation-4 28s infinite;
+  -webkit-animation: controlAnimation-4 28s infinite;
+  -o-animation: controlAnimation-4 28s infinite;
+  animation: controlAnimation-4 28s infinite
 }
 
-.autoplay .items-4 .item {
+.items-4.autoplay .item {
   -moz-animation: galleryAnimation-4 28s infinite;
   -webkit-animation: galleryAnimation-4 28s infinite;
   -o-animation: galleryAnimation-4 28s infinite;
@@ -264,7 +265,7 @@
   animation-delay: 19s
 }
 
-@keyframes controlFade-5 {
+@keyframes controlAnimation-5 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -295,14 +296,14 @@
   }
 }
 
-.autoplay .items-5 .control-button {
-  -moz-animation: controlFade-5 35s infinite;
-  -webkit-animation: controlFade-5 35s infinite;
-  -o-animation: controlFade-5 35s infinite;
-  animation: controlFade-5 35s infinite
+.items-5.autoplay .control-button {
+  -moz-animation: controlAnimation-5 35s infinite;
+  -webkit-animation: controlAnimation-5 35s infinite;
+  -o-animation: controlAnimation-5 35s infinite;
+  animation: controlAnimation-5 35s infinite
 }
 
-.autoplay .items-5 .item {
+.items-5.autoplay .item {
   -moz-animation: galleryAnimation-5 35s infinite;
   -webkit-animation: galleryAnimation-5 35s infinite;
   -o-animation: galleryAnimation-5 35s infinite;
@@ -349,7 +350,7 @@
   animation-delay: 26s
 }
 
-@-moz-keyframes controlFade-2 {
+@-moz-keyframes controlAnimation-2 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -366,7 +367,7 @@
   }
 }
 
-@-webkit-keyframes controlFade-2 {
+@-webkit-keyframes controlAnimation-2 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -383,7 +384,7 @@
   }
 }
 
-@-o-keyframes controlFade-2 {
+@-o-keyframes controlAnimation-2 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -442,7 +443,7 @@
   }
 }
 
-@-moz-keyframes controlFade-3 {
+@-moz-keyframes controlAnimation-3 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -459,7 +460,7 @@
   }
 }
 
-@-webkit-keyframes controlFade-3 {
+@-webkit-keyframes controlAnimation-3 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -476,7 +477,7 @@
   }
 }
 
-@-o-keyframes controlFade-3 {
+@-o-keyframes controlAnimation-3 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -535,7 +536,7 @@
   }
 }
 
-@-moz-keyframes controlFade-4 {
+@-moz-keyframes controlAnimation-4 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -552,7 +553,7 @@
   }
 }
 
-@-webkit-keyframes controlFade-4 {
+@-webkit-keyframes controlAnimation-4 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -569,7 +570,7 @@
   }
 }
 
-@-o-keyframes controlFade-4 {
+@-o-keyframes controlAnimation-4 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -628,7 +629,7 @@
   }
 }
 
-@-moz-keyframes controlFade-5 {
+@-moz-keyframes controlAnimation-5 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -645,7 +646,7 @@
   }
 }
 
-@-webkit-keyframes controlFade-5 {
+@-webkit-keyframes controlAnimation-5 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
@@ -662,7 +663,7 @@
   }
 }
 
-@-o-keyframes controlFade-5 {
+@-o-keyframes controlAnimation-5 {
   0% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
