@@ -11,24 +11,85 @@ h1 { @extend %avenir-heavy; }
 h2 { @extend %avenir-roman; }
 
 .gallery {
-	.item { height: 100%; }
+	.item { height: 100%; text-rendering: optimizeLegibility; }
 	.introduction { background: #4D87E2; text-align: center; }
 	.custom-controls { background: #73C16F; }
-	.animations { background: #D83827; }
+	// .animations { background: #D83827; }
+
+	header {
+		color: white;
+		text-shadow: 0 3px 0 rgba(0, 0, 0, .2);
+	}
 }
 
-.introduction {
-	color: white;
+.superfluous { display: table; height: 100%; width: 100%; } 
 
-	.superfluous { display: table; height: 100%; width: 100%; } 
+.introduction {
 	header { display: table-cell; vertical-align: middle; }
 	
-	h1 { margin: 0; font-size: 5em; letter-spacing: 3px; text-rendering: optimizeLegibility; text-shadow: 0 3px 0 rgba(0, 0, 0, .2); }
+	h1 { margin: 0; font-size: 5em; letter-spacing: 3px; }
 	h2 { @extend %avenir-light; margin: 0; font-size: 2em; color: rgba(255, 255, 255, .75); }
 }
 
+.gallery .custom-controls {
+	header {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+
+		font-size: 1.5em;	
+	}
+}
+
+.gallery .control-operator:nth-of-type(2):target ~ .secondary-controls { display: block; }
+.gallery .secondary-controls {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+
+	nav {
+		display: table-cell; 
+		vertical-align: middle;
+	}
+
+	a { 
+		height: 60px;
+		width: 60px;
+		 
+		border-radius: 60px;
+		
+		color: rgba(255, 255, 255, .6);
+		font-size: 3em;
+		font-weight: bold;
+		text-decoration: none;
+		text-align: center;
+		background: rgba(0, 0, 0, .1);
+
+		transition: all .25s;
+		&:hover { transform: scale(1.1); }
+	}
+
+	a img { margin-top: .1em; }
+
+	a:nth-child(1) { float: left; margin-left: 1em; }
+	a:nth-child(1) img { margin-right: .1em; }
+	
+	a:nth-child(2) { float: right; margin-right: 1em; }
+	a:nth-child(2) img { margin-left: .1em; }
+}
+
 .gallery .animations {
-	h1, h2 { color: white; }
+	.superfluous { animation: backgroundCycle 60s alternate both infinite; }
+
+	header {
+		display: table-cell;
+		vertical-align: middle;
+		z-index: 1;
+	}
+
+	h1 { font-size: 7em; font-weight: 600; }
 
 	.cloud { 
 		position: absolute; top: 5%; font-size: 400%;
@@ -39,11 +100,12 @@ h2 { @extend %avenir-roman; }
 	}
 
 	.balloon {
+		color: rgba(0, 0, 0, .8);
 		position: absolute; width: 100px; top: 0;
 
-		&:nth-of-type(1) { font-size: 800%; right: 40%; }
+		&:nth-of-type(1) { font-size: 1500%; right: 40%; }
 		&:nth-of-type(2) { 
-			font-size: 300%; 
+			font-size: 800%; 
 			right: 20%;
 			-webkit-filter: blur(.5px);
 			   -moz-filter: blur(.5px);
@@ -51,16 +113,16 @@ h2 { @extend %avenir-roman; }
 			     -o-filter:	blur(.5px);
 							filter: blur(.5px); 
 
-			.float, .sway { animation-delay: 2s; }
+			.float, .sway { animation-delay: -2s; }
 		}
 		
 		&:nth-of-type(3) { 
-			font-size: 80%; 
+			font-size: 300%; 
 			right: 32%; 
 			-webkit-filter: blur(1px); 
 							filter: blur(1px);
 
-			.float, .sway { animation-delay: 3.5s; }
+			.float, .sway { animation-delay: -3.5s; }
 		}
 	}
 
@@ -109,10 +171,18 @@ h2 { @extend %avenir-roman; }
 	color: white;
 	background-color: #d36a6a;
 
-	.download-options { width: 70vw; margin: 0 auto; margin-top: 5em; overflow: hidden; }
+	.download-options { width: 70vw; margin: 0 auto; margin-top: 5em; overflow: visible; }
 	.download-options h3 { margin: 0; font-size: 2em; text-shadow: 0 2px 0 rgba(0, 0, 0, .1); }
 	.download-options .filesize { @extend %proxima-nova-condensed-light; margin: 0; font-size: 1.2em; font-weight: 600; color: rgba(255, 255, 255, .6); }
-	.prefixed, .unprefixed { float: left; width: 50%; }
+	
+	.prefixed, 
+	.unprefixed {
+		width: 75%;		
+		text-decoration: none;
+		
+		img { transition: all .25s; }
+		&:hover img { transform: scale(1.025); } 
+	}
 
 	footer { @extend %proxima-nova-condensed-light; font-weight: 600; display: table-footer-group; color: rgba(255, 255, 255, .6); }
 	footer a { 
@@ -132,9 +202,11 @@ h2 { @extend %avenir-roman; }
 	color: white;
 	background-color: $screencast-color;
 
+	.learnings { padding: 0; }
+
 	.learnings li { 
 		margin-top: 3em;
-		width: 25%; display: inline-block; vertical-align: top;
+		width: 50%; display: inline-block; vertical-align: top;
 		list-style-type: none; 
 		text-align: center;
 	}

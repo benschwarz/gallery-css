@@ -12,7 +12,6 @@ module.exports = function(grunt) {
         files: {
           'css/main.css': [
             'components/normalize-css/normalize.css',
-            'components/jquery.tipFiveThree/jquery.tipfivethree.css',
             'css/gallery.css',
             'css/gallery.theme.css',
             'css/screen.css'

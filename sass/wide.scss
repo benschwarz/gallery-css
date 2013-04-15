@@ -3,3 +3,17 @@
 .grid { @extend %grid; }
 
 .getting-started .steps { max-width: 60%; }
+
+.download-options {
+  .unprefixed img { margin-left: -2em; }
+
+  .prefixed, 
+  .unprefixed { 
+    width: 50%;
+    float: left;
+  }
+}
+
+.screencast .learnings li {
+  width: 25%;
+}

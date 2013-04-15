@@ -31,15 +31,29 @@
 				
 				<div id="item-2" class="control-operator"></div>
 				<figure class="item custom-controls">
-					<h1>2</h1>
+					<div class="superfluous">
+						<header>
+							<h1>Write your own controls</h1>
+						</header>
+					</div>
 				</figure>
+
+				<div class="secondary-controls">
+					<div class="superfluous">
+						<nav>
+							<a href="#item-1"><img src="images/arrow-left.svg" alt="Left pointing arrow"></a>
+							<a href="#item-3"><img src="images/arrow-right.svg" alt="Right pointing arrow"></a>	
+						</nav>
+					</div>
+				</div>
 				
 				<div id="item-3" class="control-operator"></div>
 				<figure class="item animations">
-					<header class="grid">
-						<h1>Animations, embeds, whatever.</h1>
-						<h2>In HTML, anything goes</h2>
-					</header>
+					<div class="superfluous">
+						<header class="grid">
+							<h1>Animations, embeds — whatever you want</h1>
+						</header>
+					</div>
 					
 					<div class="balloon"><div class="float"><div class="sway"><i class="icon-balloon"></i></div></div></div>
 					<div class="balloon"><div class="float"><div class="sway"><i class="icon-balloon"></i></div></div></div>
@@ -57,7 +71,7 @@
 				</div>
 			</section>
 				
-			<section class="autoheight main-module getting-started">
+			<section id="getting-started" class="autoheight main-module getting-started">
 				<header>
 					<h1>Get it together</h1>
 					<h2>What you need to get started</h2>	
@@ -102,21 +116,21 @@
 			<section class="autoheight main-module releases coloured">
 				<header>
 					<h1>Choose a release</h1>
-					<h2>Download a prefixed or unprefixed build, <br>install using bower, or build it yo' self.</h2>
+					<h2>Download a prefixed or unprefixed build, <br>install <a href="https://github.com/benschwarz/gallery-css#installation">using bower</a>, or <a href="https://github.com/benschwarz/gallery-css#build-instructions">build it yo' self.</a></h2>
 				</header>
 				
 				<div class="download-options">
-					<article class="prefixed">
+					<a class="prefixed" href="https://raw.github.com/benschwarz/gallery-css/master/dist/gallery.prefixed.css">
 						<img src="images/download-prefixes.svg" alt="Browser prefixes">
 						<h3>Prefixed CSS</h3>
 						<p class="filesize">10kb (784 bytes gzipped)</p>
-					</article>
+					</a>
 					
-					<article class="unprefixed">
+					<a class="unprefixed" href="https://raw.github.com/benschwarz/gallery-css/master/dist/gallery.css">
 						<img src="images/download-target.svg" alt="Arrow on a target">
 						<h3>Unprefixed CSS</h3>
 						<p class="filesize">4.5kb (543 bytes gzipped)</p>
-					</article>
+					</a>
 				</div>
 				
 				<footer>
@@ -127,40 +141,44 @@
 			<section id="screencast" class="autoheight main-module screencast coloured">
 				<div class="grid">
 					<header>
-					<h1>Learn how<br> Gallery works</h1>
-					<h2>Gallery uses some pretty advanced techniques.<br> Buy my screencast to learn them. Hell yes!</h2>	
-				</header>
-
-				<ul class="learnings">
-					<li>
-						<i class="icon-positioning"></i>
-						<p>Absolute positioning.<br>For real this time</p>
-					</li><li>
-						<i class="icon-transitions"></i>
-						<p>CSS Transitions</p>
-					</li><li>
-						<i class="icon-css"></i>
-						<p>All the gnarly<br> CSS selectors</p>
-					</li><li>
-						<i class="icon-noscript"></i>
-						<p>Interactive,<br> without script</p>
-					</li><li>
-						<i class="icon-prefixes"></i>
-						<p>Vendor prefixing<br> in the wild</p>
-					</li><li>
-						<i class="icon-sass"></i>
-						<p>In-depth features<br> of SASS &amp; SCSS</p>
-					</li><li>
-						<i class="icon-animation"></i>
-						<p>CSS Animation</p>
-					</li><li>
-						<i class="icon-tools"></i>
-						<p>The gallery css<br> build system</p>
-					</li>
-				</ul>
+						<h1>Learn how<br> Gallery works</h1>
+						<h2>Gallery uses some pretty advanced techniques.<br> Buy my screencast to learn them. Hell yes!</h2>	
+					</header>
+				
+					<section>
+						<h2>Topics covered</h2>
+						<ul class="learnings">
+							<li>
+								<i class="icon-positioning"></i>
+								<p>Absolute positioning.<br>For real this time</p>
+							</li><li>
+								<i class="icon-transitions"></i>
+								<p>CSS Transitions</p>
+							</li><li>
+								<i class="icon-css"></i>
+								<p>All the gnarly<br> CSS selectors</p>
+							</li><li>
+								<i class="icon-noscript"></i>
+								<p>Adding interactivity,<br> without script</p>
+							</li><li>
+								<i class="icon-prefixes"></i>
+								<p>Maintainable<br> vendor prefixing</p>
+							</li><li>
+								<i class="icon-sass"></i>
+								<p>Advanced use<br> of SASS &amp; SCSS</p>
+							</li><li>
+								<i class="icon-animation"></i>
+								<p>CSS Animation</p>
+							</li><li>
+								<i class="icon-tools"></i>
+								<p>Grunt.js based<br> build system</p>
+							</li>
+						</ul>
+					</section>
 				</div>
 				<footer class="grid">
-					<ul class="quotes gallery items-2">
+					<h2>What the people are saying</h2>
+					<ul class="quotes">
 						<li class="item">
 							<img src="//twimg0-a.akamaihd.net/profile_images/1668225011/Gravatar2.png" alt="Chris Coyier" class="avatar">
 							<q>[GALLERY.CSS is] a great, pure approach, the video is dope, you should watch it.</q>
@@ -174,10 +192,26 @@
 					</ul>
 					
 					<div class="purchase">
-						<a href="#buy-it" class="buy">Buy the screencast</a>
-						<span class="protip">!60! minutes of screencast, for $12. Golden</span>
-						
-						<p>Got a team? Buy a <a href="#">3</a>, or <a href="#">5</a> seat licence for a discount</p>
+						<div class="superfluous">
+							<h2>Purchase options</h2>
+							<ul class="details">
+								<li>One hour long</li>
+								<li>No DRM - H264</li>
+								<li>Download and keep forever</li>
+							</ul>
+							
+							<input id="one" type="radio" name="purchase-option" value="one">
+							<label for="one">One seat - $12</label>
+
+							<input id="three" type="radio" name="purchase-option" value="three">
+							<label for="three">Three seats - $32</label>
+
+							<input id="five" type="radio" name="purchase-option" value="five">
+							<label for="five">Five seats - $50</label>
+
+							<a href="#buy-it" class="buy">Buy &amp; download</a>
+						</div>
+						<span class="not-convinced">Still not convinced? Get your money back if you're dissatisfied</span>
 					</div>
 				</footer>
 			</section>
