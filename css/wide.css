@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: sans-serif; }
+
+.grid {
+  margin: 0 auto;
+  max-width: 1260px;
+  padding: 0 4%;
+  font-family: Layout; }
+  .grid > * {
+    font-family: sans-serif; }
+
+.getting-started .steps {
+  max-width: 60%; }

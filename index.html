@@ -1,0 +1,224 @@
+  <!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Gallery CSS</title>
+		
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/narrow.css" media="screen and (max-width: 44em)">
+    <link rel="stylesheet" href="css/wide.css" media="screen and (min-width: 44em)">
+    <link rel="stylesheet" href="components/prism/prism.css">
+  	
+  	<script src="js/vendor/modernizr.min.js"></script>
+  	<script src="js/vendor/prefixfree.min.js" async></script>
+  	<script data-main="js/main.js" src="js/vendor/requirejs.jquery.min.js" async></script>
+    <script src="http://fast.fonts.com/jsapi/9f6762ef-84f5-4fb3-93ec-b812ca428627.js"></script>
+	</head>
+	<body>
+		<main role="main">
+			<section class="autoheight gallery items-3">
+				<div id="item-1" class="control-operator"></div>
+				<figure class="item introduction">
+					<div class="superfluous">
+						<header>
+							<h1>Gallery</h1>
+							<h2>Pure CSS, not script to be found.</h2>	
+						</header>
+					</div>
+				</figure>
+				
+				<div id="item-2" class="control-operator"></div>
+				<figure class="item custom-controls">
+					<h1>2</h1>
+				</figure>
+				
+				<div id="item-3" class="control-operator"></div>
+				<figure class="item animations">
+					<header class="grid">
+						<h1>Animations, embeds, whatever.</h1>
+						<h2>In HTML, anything goes</h2>
+					</header>
+					
+					<div class="balloon"><div class="float"><div class="sway"><i class="icon-balloon"></i></div></div></div>
+					<div class="balloon"><div class="float"><div class="sway"><i class="icon-balloon"></i></div></div></div>
+					<div class="balloon"><div class="float"><div class="sway"><i class="icon-balloon"></i></div></div></div>
+					
+					<div class="cloud"><i class="icon-cloud"></i></div>
+					<div class="cloud"><i class="icon-clouds"></i></div>
+					<div class="cloud"><i class="icon-cloud"></i></div>
+				</figure>
+				
+				<div class="controls">
+					<a href="#item-1" class="control-button">•</a>
+					<a href="#item-2" class="control-button">•</a>
+					<a href="#item-3" class="control-button">•</a>
+				</div>
+			</section>
+				
+			<section class="autoheight main-module getting-started">
+				<header>
+					<h1>Get it together</h1>
+					<h2>What you need to get started</h2>	
+				</header>
+
+				<div class="grid">
+					<ol class="steps">
+						<li><p>Include <code>gallery.css</code> &amp; <code>gallery.theme.css</code></p></li>
+						<li>
+								<p>Mark up your gallery</p>
+<pre><code class="language-markup">&lt;div class="gallery items-3"&gt;
+  &lt;div id="item-1" class="control-operator"&gt;&lt;/div&gt;
+  &lt;figure class="item"&gt;
+    &lt;h1&gt;Item 1&lt;/h1&gt;
+  &lt;/figure&gt;
+  
+  &lt;div id="item-2" class="control-operator"&gt;&lt;/div&gt;
+  &lt;figure class="item"&gt;
+    &lt;h1&gt;Item 2&lt;/h1&gt;
+  &lt;/figure&gt;
+  
+  &lt;div id="item-3" class="control-operator"&gt;&lt;/div&gt;
+  &lt;figure class="item"&gt;
+    &lt;h1&gt;Item 3&lt;/h1&gt;
+  &lt;/figure&gt;
+  
+  &lt;div class="controls"&gt;
+    &lt;a href="#item-1" class="control-button"&gt;•&lt;/a&gt;
+    &lt;a href="#item-2" class="control-button"&gt;•&lt;/a&gt;
+    &lt;a href="#item-3" class="control-button"&gt;•&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+									<p>Want your gallery to autoplay? <em>Add the <code>.autoplay</code> class!</em></p>
+<pre><code class="language-markup">&lt;div class="gallery autoplay items-3"&gt;</code></pre>
+							</li>
+							<li></li>
+					</ol>
+				</div>
+			</section>
+			
+			<section class="autoheight main-module releases coloured">
+				<header>
+					<h1>Choose a release</h1>
+					<h2>Download a prefixed or unprefixed build, <br>install using bower, or build it yo' self.</h2>
+				</header>
+				
+				<div class="download-options">
+					<article class="prefixed">
+						<img src="/images/download-prefixes.svg" alt="Browser prefixes">
+						<h3>Prefixed CSS</h3>
+						<p class="filesize">6kb</p>
+					</article>
+					
+					<article class="unprefixed">
+						<img src="/images/download-target.svg" alt="Arrow on a target">
+						<h3>Unprefixed CSS</h3>
+						<p class="filesize">3kb</p>
+					</article>
+				</div>
+				
+				<footer>
+					<a href="//github.com/benschwarz/gallery-css">source &amp; other build options available on github</a>
+				</footer>
+			</section>
+			
+			<section class="autoheight main-module screencast coloured">
+				<div class="grid">
+					<header>
+					<h1>Learn how<br> Gallery works</h1>
+					<h2>Gallery uses some pretty advanced techniques.<br> Buy my screencast to learn them. Hell yes!</h2>	
+				</header>
+
+				<ul class="learnings">
+					<li>
+						<i class="icon-positioning"></i>
+						<p>Absolute positioning.<br>For real this time</p>
+					</li><li>
+						<i class="icon-transitions"></i>
+						<p>CSS Transitions</p>
+					</li><li>
+						<i class="icon-css"></i>
+						<p>All the gnarly<br> CSS selectors</p>
+					</li><li>
+						<i class="icon-noscript"></i>
+						<p>Interactive,<br> without script</p>
+					</li><li>
+						<i class="icon-prefixes"></i>
+						<p>Vendor prefixing<br> in the wild</p>
+					</li><li>
+						<i class="icon-sass"></i>
+						<p>In-depth features<br> of SASS &amp; SCSS</p>
+					</li><li>
+						<i class="icon-animation"></i>
+						<p>CSS Animation</p>
+					</li><li>
+						<i class="icon-tools"></i>
+						<p>The gallery css<br> build system</p>
+					</li>
+				</ul>
+				</div>
+				<footer class="grid">
+					<ul class="quotes gallery items-2">
+						<li class="item">
+							<img src="//twimg0-a.akamaihd.net/profile_images/1668225011/Gravatar2.png" alt="Chris Coyier" class="avatar">
+							<q>[GALLERY.CSS is] a great, pure approach, the video is dope, you should watch it.</q>
+							<cite>— Chris Coyier, csstricks.com</cite>
+						</li>
+						<li class="item">
+							<img src="//twimg0-a.akamaihd.net/profile_images/1668225011/Gravatar2.png" alt="Chris Coyier" class="avatar">
+							<q>This rules!</q>
+							<cite>— Some guy, madsite.com</cite>
+						</li>
+					</ul>
+					
+					<div class="purchase">
+						<a href="#buy-it" class="buy">Buy the screencast</a>
+						<span class="protip">!60! minutes of screencast, for $12. Golden</span>
+						
+						<p>Got a team? Buy a <a href="#">3</a>, or <a href="#">5</a> seat licence for a discount</p>
+					</div>
+				</footer>
+			</section>
+		</main>
+
+		<footer role="contentinfo" class="grid">
+			<div class="wrapper">
+				<i class="icon-gallery"></i>
+				<h3>Gallery CSS. Awesome</h3>
+				<p>Another joint by <a href="//twitter.com/benschwarz">Ben Schwarz</a>, with help from <a href="//github.com/benschwarz/gallery-css/contributors">awesome contributors.</a><br> Gallery CSS is free and open-source. Attribute it when you can.</p>
+			</div>
+		</footer>
+	</body>
+	
+	<script>
+		if ( ! Modernizr.svg ) {
+      // Replace .svg images with a .png when svg isn't supported
+      require(['jquery'], function ( $ ) {
+        var $images = $( 'img[src$=".svg"]' );
+
+        $images.each( function ( index, image ) {
+          image.src = image.src.replace( /\.svg$/, '.png' );
+        } );
+      });
+    }
+
+    if( ! Modernizr.cssvhunit ) {
+    	require(['jquery'], function ( $ ) {
+    		var setSectionHeight = function () {
+					var height = $( window ).height();
+					$( '.autoheight' ).css( 'min-height', height );	
+				};
+
+				$( window ).bind( 'resize', function () {
+					setSectionHeight();
+				} );
+			
+				setSectionHeight();	
+    	});
+    }
+	</script>
+
+	<script src="components/prism/prism.js"></script>
+</html>

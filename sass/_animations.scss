@@ -1,0 +1,12 @@
+@keyframes sway {
+  0%    { 
+    transform: rotate(5deg); 
+    transform-origin: 50% 0%;
+  }
+  100%  { transform: rotate(-5deg); }
+}
+
+@keyframes float {
+  0% { transform: translate3d(90%, 150%, 0); }
+  100% { transform: translate3d(-60%, -100%, 0); }
+}

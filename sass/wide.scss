@@ -1,0 +1,5 @@
+@import 'grid';
+
+.grid { @extend %grid; }
+
+.getting-started .steps { max-width: 60%; }

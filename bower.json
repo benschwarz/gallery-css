@@ -1,0 +1,9 @@
+{
+  "name": "gallery-css-site",
+  "version": "0.0.0",
+  "dependencies": {
+    "requirejs-text": "~2.0.5",
+    "prism": "latest",
+    "normalize-css": "~2.1.1"
+  }
+}

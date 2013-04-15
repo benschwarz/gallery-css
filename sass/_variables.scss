@@ -1,0 +1,14 @@
+$public_path: '/';
+
+$grid-max-width:          1260px !default;
+$grid-max-columns:        12 !default;
+$grid-gutter-width:       4% !default;
+$use-vendor-prefixes:     false !default;
+$create-classes:          false !default;
+
+@mixin vector-bg-with-fallback($name) {
+	background-image: url('#{$public_path}images/#{$name}.png');
+	background-image: none, url('#{$public_path}images/#{$name}.svg');
+}
+
+$screencast-color: #61ba96;
