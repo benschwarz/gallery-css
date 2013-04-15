@@ -4,6 +4,14 @@ Gallery.css is *all* CSS. Think: Simple, maintainable and understandable galleri
 
 _What? No script!? Why?_ — Gallery css started as an experiment to build interactive, fluid componentry without the need for jQuery, or a jQuery carousel script. Use this library, or don't — either way, hopefully you'll learn from the techniques used within. 
 
+### Installation
+
+The preferred method to install gallery-css is by using Bower, a package manager for front-end components.
+
+`bower install gallery-css`
+
+Otherwise, if you want to keep it simple, check the [dist directory](/dist).
+
 ### Getting started
 
 You've got a couple options with how you'd like to use gallery.css:
@@ -11,6 +19,8 @@ You've got a couple options with how you'd like to use gallery.css:
 	* Without autoplaying animation
 	* With autoplaying animation
 	* With or without browser prefixes
+
+Read the [getting started guide](http://benschwarz.github.io/gallery-css#getting-started), or checkout the [examples](/examples)
 
 ### How does it work? 
 
@@ -42,3 +52,13 @@ I've [prepared a screencast](http://benschwarz.github.io/gallery-css) that will 
 </table>
 
 † [Absolutely possible](examples/ie-8) using a variety of JS selector shims, although not recommended.
+
+# Build instructions
+
+Gallery CSS is built using [grunt](http://gruntjs.com) & RubySASS.
+
+You'll need:
+
+* Ruby (and sass - `gem install sass`)
+* Run `npm install` from the root directory.
+* To run a build, you'll simply need to run `grunt`.
