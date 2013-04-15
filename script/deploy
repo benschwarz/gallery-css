@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-assets='components stylesheets js images fonts index.html'
-echo 'Deploying: ' $assets
-
-s3cmd sync --force --reduced-redundancy --acl-public $assets s3://gallery-css/

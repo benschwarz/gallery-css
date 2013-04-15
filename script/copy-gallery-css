@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-cp ../gallery-css/dist/*.css ./css/
