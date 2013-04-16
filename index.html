@@ -145,9 +145,9 @@
 						<h2>Gallery uses some pretty advanced techniques.<br> Buy my screencast to learn them. Hell yes!</h2>	
 					</header>
 				
-					<section>
-						<h2>Topics covered</h2>
-						<ul class="learnings">
+					<section class="learnings">
+						<h3>Topics covered</h3>
+						<ul>
 							<li>
 								<i class="icon-positioning"></i>
 								<p>Absolute positioning.<br>For real this time</p>
@@ -177,37 +177,46 @@
 					</section>
 				</div>
 				<footer class="grid">
-					<h2>What the people are saying</h2>
-					<ul class="quotes">
-						<li class="item">
+					<section class="quotes">
+						<h3>What the people are saying</h3>
+						<article class="item">
 							<img src="//twimg0-a.akamaihd.net/profile_images/1668225011/Gravatar2.png" alt="Chris Coyier" class="avatar">
 							<q>[GALLERY.CSS is] a great, pure approach, the video is dope, you should watch it.</q>
 							<cite>— Chris Coyier, csstricks.com</cite>
-						</li>
-						<li class="item">
+						</article>
+						<article class="item">
 							<img src="//twimg0-a.akamaihd.net/profile_images/1668225011/Gravatar2.png" alt="Chris Coyier" class="avatar">
 							<q>This rules!</q>
 							<cite>— Some guy, madsite.com</cite>
-						</li>
-					</ul>
+						</article>
+					</section>
+					
 					
 					<div class="purchase">
 						<div class="superfluous">
-							<h2>Purchase options</h2>
-							<ul class="details">
-								<li>One hour long</li>
-								<li>No DRM - H264</li>
-								<li>Download and keep forever</li>
-							</ul>
+							<header>
+								<h3>Purchase options</h3>
+								<ul class="details">
+									<li>One hour long</li>
+									<li>No DRM - H264</li>
+									<li>Download and keep forever</li>
+								</ul>	
+							</header>
 							
-							<input id="one" type="radio" name="purchase-option" value="one">
-							<label for="one">One seat - $12</label>
-
+							<input id="one" type="radio" name="purchase-option" value="one" checked>
+							<div class="purchase-option">
+								<label for="one">One seat - $12</label>
+							</div class="purchase-option">
+							
 							<input id="three" type="radio" name="purchase-option" value="three">
-							<label for="three">Three seats - $32</label>
+							<div class="purchase-option">
+								<label for="three">Three seats - $32</label>
+							</div class="purchase-option">
 
 							<input id="five" type="radio" name="purchase-option" value="five">
-							<label for="five">Five seats - $50</label>
+							<div class="purchase-option">
+								<label for="five">Five seats - $50</label>
+							</div class="purchase-option">
 
 							<a href="#buy-it" class="buy">Buy &amp; download</a>
 						</div>

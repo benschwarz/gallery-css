@@ -202,14 +202,24 @@ h2 { @extend %avenir-roman; }
 	color: white;
 	background-color: $screencast-color;
 
-	.learnings { padding: 0; }
+	h3 { 
+		@extend %proxima-nova-light;
+		display: inline-block;
+		font-size: 2em;
+		font-weight: 300;
+		padding-bottom: 0;
+		border-bottom: 1px solid rgba(255, 255, 255, .6);
+	}
+
+	.learnings { text-align: center; }
+	.learnings ul { padding: 0; }
 
 	.learnings li { 
 		margin-top: 3em;
 		width: 50%; display: inline-block; vertical-align: top;
 		list-style-type: none; 
-		text-align: center;
 	}
+
 	.learnings i { font-size: 350%; }
 	.learnings p { 
 		@extend %proxima-nova-semibold; 
@@ -221,67 +231,103 @@ h2 { @extend %avenir-roman; }
 	footer { padding-top: 5em; padding-bottom: 5em; overflow: hidden; clear: left; }
 
 	.quotes {
-		@extend %proxima-nova-condensed-light;
-		max-width: 350px;
+		max-width: 45%;
 		margin: 0;
 		float: left; clear: left;
 		overflow: hidden;
 		text-align: left;
 		list-style-type: none;
 
-		li { overflow: hidden; }
+		.item { overflow: hidden; }
 
 		.avatar { width: 55px; border-radius: 55px; float: left; margin-right: 1em; }
 		cite { @extend %proxima-nova-condensed-regular; display: block; }
 	}
 
-	.purchase { float: right; }
+	.purchase { 
+		@extend %proxima-nova;
+		position: relative;
+		float: right; 
+		max-width: 320px;
+		
+		.superfluous { 
+			background-color: white;
+			border-radius: 3px;
+			color: $screencast-color;
+			box-shadow: 0 3px 0 rgba(0, 0, 0, .1);
+		}
+
+		header { 
+			text-align: left;
+			padding: .7em 1.2em;
+		}
+
+		h3 { 
+			margin: 0;
+			border: 0; 
+			color: $screencast-color;
+		}
+
+		.details { 
+			margin: 0;
+			padding: 0; 
+			font-size: .9em;
+			list-style-position: inside;
+		}
+
+		input:not(#oldIE) { 
+			position: absolute;
+			float: left;
+			margin: .5em 0 0 1.15em;
+			width: 14px;
+			height: 14px;
+			opacity: 0;
+		}
+
+		input:not(#oldIE):checked + .purchase-option {
+			border-color: $screencast-color;
+			font-weight: bold;
+			padding: .7em 1.2em .7em 2.7em;
+
+			background-image: url(../images/radio-checked.png);
+			background-image: none, url(../images/radio-checked.svg);
+
+			background-position: .7em .8em;
+		}
+
+		.purchase-option {
+			cursor: pointer;
+			border-top: 1px solid transparent;
+			border-bottom: 1px solid transparent;
+			transition: border .5s, padding .5s;
+
+			padding: .3em 1.2em .3em 2.7em;
+
+			background-image: url(../images/radio-unchecked.png);
+			background-image: none, url(../images/radio-unchecked.svg);
+			
+			background-position: .9em .6em;
+			background-repeat: no-repeat;
+		}
+	}
 
 	.buy {
-		display: inline-block;
-		padding: .3em .8em;
-		font-size: 1.5em; font-weight: 600;
+		display: block;
+		margin: .75em 1em;
+		padding: .8em 0;
+		font-size: 1em; font-weight: 600;
 		border-radius: 3px;
-		color: $screencast-color; text-align: center; text-decoration: none;
-		background-color: white;
+		color: white; text-align: center; text-decoration: none;
+		background-color: $screencast-color;
 
 		transition: all .25s ease-in-out;
 
-		&:hover { box-shadow: 0 0 0 3px rgba(255, 255, 255, .7); }
+		&:hover { box-shadow: 0 0 0 3px rgba(0, 0, 0, .1); }
 	}
 
-	.protip { @extend %proxima-nova-condensed-light; display: block; margin: .6em 0; font-weight: 600; font-size: .9em; }
+	.not-convinced { @extend %proxima-nova-condensed-regular; display: block; margin: .6em 0; font-weight: 300; font-size: .8em; }
 }
 
-// .project-updates {
-// 	$bgColor: lighten($screencast-color, 15%);
-
-// 	padding: 2em 0;
-// 	background: $bgColor;
-
-// 	input, button { @extend %avenir-roman; }
-
-// 	input { 
-// 		background: $bgColor; 
-// 		border: 0;
-// 		color: white;
-// 		min-width: 300px;
-
-// 		&::-webkit-input-placeholder { color: white; }
-// 		&:focus { outline: 0; }
-// 	}
-
-// 	button { 
-// 		transition: all .25s;
-// 		color: $bgColor; 
-// 		padding: .4em .8em; 
-// 		background: white; 
-// 		border: 0; border-radius: 3px; 
-// 		font-size: .8em; font-weight: 600;
-
-// 		&:hover { box-shadow: 0 0 0 3px rgba(255, 255, 255, .7); }
-// 	}
-// }
 
 footer[role="contentinfo"] {
 	h3, p { @extend %proxima-nova; }
@@ -306,8 +352,4 @@ footer[role="contentinfo"] {
 		font-size: .7em; margin: 0;
 		a { font-weight: 700; }
 	}
-
-	.gallery { min-height: 100px; }
 }
-
-.features section { background-repeat: no-repeat; background-position: 50% 30%; padding-top: 150px; }

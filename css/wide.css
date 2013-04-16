@@ -22,5 +22,9 @@ html {
   width: 50%;
   float: left; }
 
+.screencast .learnings {
+  margin-top: 3em;
+  margin-bottom: 3em; }
+
 .screencast .learnings li {
   width: 25%; }

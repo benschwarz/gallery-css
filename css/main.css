@@ -741,16 +741,19 @@ h2 {
 h1 {
   font-family: 'Avenir LT W01 85 Heavy'; }
 
-body, footer[role="contentinfo"] h3, footer[role="contentinfo"] p {
+body, .screencast .purchase, footer[role="contentinfo"] h3, footer[role="contentinfo"] p {
   font-family: 'Proxima N W15 Reg'; }
 
 .screencast .learnings p {
   font-family: 'Proxima N W15 Smbd'; }
 
-.releases .download-options .filesize, .releases footer, .screencast .quotes, .screencast .protip {
+.screencast h3 {
+  font-family: 'Proxima N W15 Light'; }
+
+.releases .download-options .filesize, .releases footer {
   font-family: 'ProximaNW15-CdLightIt'; }
 
-.screencast .quotes cite {
+.screencast .quotes cite, .screencast .not-convinced {
   font-family: 'Proxima N W15 Cd Reg'; }
 
 @font-face {
@@ -1068,15 +1071,22 @@ a {
 .screencast {
   color: white;
   background-color: #61ba96; }
+  .screencast h3 {
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 300;
+    padding-bottom: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6); }
   .screencast .learnings {
+    text-align: center; }
+  .screencast .learnings ul {
     padding: 0; }
   .screencast .learnings li {
     margin-top: 3em;
     width: 50%;
     display: inline-block;
     vertical-align: top;
-    list-style-type: none;
-    text-align: center; }
+    list-style-type: none; }
   .screencast .learnings i {
     font-size: 350%; }
   .screencast .learnings p {
@@ -1090,14 +1100,14 @@ a {
     overflow: hidden;
     clear: left; }
   .screencast .quotes {
-    max-width: 350px;
+    max-width: 45%;
     margin: 0;
     float: left;
     clear: left;
     overflow: hidden;
     text-align: left;
     list-style-type: none; }
-    .screencast .quotes li {
+    .screencast .quotes .item {
       overflow: hidden; }
     .screencast .quotes .avatar {
       width: 55px;
@@ -1107,25 +1117,69 @@ a {
     .screencast .quotes cite {
       display: block; }
   .screencast .purchase {
-    float: right; }
+    position: relative;
+    float: right;
+    max-width: 320px; }
+    .screencast .purchase .superfluous {
+      background-color: white;
+      border-radius: 3px;
+      color: #61ba96;
+      box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1); }
+    .screencast .purchase header {
+      text-align: left;
+      padding: 0.7em 1.2em; }
+    .screencast .purchase h3 {
+      margin: 0;
+      border: 0;
+      color: #61ba96; }
+    .screencast .purchase .details {
+      margin: 0;
+      padding: 0;
+      font-size: .9em;
+      list-style-position: inside; }
+    .screencast .purchase input:not(#oldIE) {
+      position: absolute;
+      float: left;
+      margin: 0.5em 0 0 1.15em;
+      width: 14px;
+      height: 14px;
+      opacity: 0; }
+    .screencast .purchase input:not(#oldIE):checked + .purchase-option {
+      border-color: #61ba96;
+      font-weight: bold;
+      padding: 0.7em 1.2em 0.7em 2.7em;
+      background-image: url(../images/radio-checked.png);
+      background-image: none, url(../images/radio-checked.svg);
+      background-position: 0.7em 0.8em; }
+    .screencast .purchase .purchase-option {
+      cursor: pointer;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      transition: border 0.5s, padding 0.5s;
+      padding: 0.3em 1.2em 0.3em 2.7em;
+      background-image: url(../images/radio-unchecked.png);
+      background-image: none, url(../images/radio-unchecked.svg);
+      background-position: 0.9em 0.6em;
+      background-repeat: no-repeat; }
   .screencast .buy {
-    display: inline-block;
-    padding: 0.3em 0.8em;
-    font-size: 1.5em;
+    display: block;
+    margin: 0.75em 1em;
+    padding: 0.8em 0;
+    font-size: 1em;
     font-weight: 600;
     border-radius: 3px;
-    color: #61ba96;
+    color: white;
     text-align: center;
     text-decoration: none;
-    background-color: white;
+    background-color: #61ba96;
     transition: all 0.25s ease-in-out; }
     .screencast .buy:hover {
-      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7); }
-  .screencast .protip {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1); }
+  .screencast .not-convinced {
     display: block;
     margin: 0.6em 0;
-    font-weight: 600;
-    font-size: .9em; }
+    font-weight: 300;
+    font-size: .8em; }
 
 footer[role="contentinfo"] .wrapper {
   padding: 2em 0; }
@@ -1148,10 +1202,3 @@ footer[role="contentinfo"] p {
   margin: 0; }
   footer[role="contentinfo"] p a {
     font-weight: 700; }
-footer[role="contentinfo"] .gallery {
-  min-height: 100px; }
-
-.features section {
-  background-repeat: no-repeat;
-  background-position: 50% 30%;
-  padding-top: 150px; }
