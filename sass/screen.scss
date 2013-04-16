@@ -307,7 +307,7 @@ h2 { @extend %avenir-roman; }
 			border-top: 1px solid transparent;
 			border-bottom: 1px solid transparent;
 
-			transition: border .5s, background-size .5s cubic-bezier(0, 1.5, .9, 1);
+			transition: border .5s, background .2s ease-in-out;
 
 			background-image: url(../images/radio-checked.png);
 			background-image: none, url(../images/radio-unchecked.svg), url(../images/radio-checked.svg);

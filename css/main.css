@@ -1170,7 +1170,7 @@ a {
     .screencast .purchase .purchase-option {
       border-top: 1px solid transparent;
       border-bottom: 1px solid transparent;
-      transition: border 0.5s, background-size 0.5s cubic-bezier(0, 1.5, 0.9, 1);
+      transition: border 0.5s, background 0.2s ease-in-out;
       background-image: url(../images/radio-checked.png);
       background-image: none, url(../images/radio-unchecked.svg), url(../images/radio-checked.svg);
       background-position: 0.9em 50%;
