@@ -16,7 +16,7 @@ body, .screencast .purchase, footer[role="contentinfo"] h3, footer[role="content
 .screencast h3 {
   font-family: 'Proxima N W15 Light'; }
 
-.releases .download-options .filesize, .releases footer {
+.releases .download-options .filesize, .releases footer, .screencast .quotes q {
   font-family: 'ProximaNW15-CdLightIt'; }
 
 .screencast .quotes cite, .screencast .not-convinced {
@@ -255,9 +255,6 @@ a {
 .gallery .animations .float {
   animation: float 60s infinite; }
 
-.autoheight {
-  min-height: 100vh; }
-
 .main-module header {
   margin: 0 auto;
   text-align: center; }
@@ -286,9 +283,13 @@ a {
     font-weight: 500;
     color: rgba(43, 62, 80, 0.6); }
   .getting-started .steps {
-    margin: 2em auto; }
+    margin: 2em auto;
+    padding: 0;
+    list-style-position: inside; }
   .getting-started .steps li {
     margin: 2em 0; }
+  .getting-started .steps pre {
+    font-size: .9em; }
 
 .releases {
   display: table;
@@ -322,15 +323,15 @@ a {
     .releases .unprefixed:hover img {
       transform: scale(1.025); }
   .releases footer {
-    font-weight: 600;
     display: table-footer-group;
     color: rgba(255, 255, 255, 0.6); }
   .releases footer a {
-    transition: all 0.25s ease-in-out;
     display: inline-block;
+    margin-top: 3em;
     font-size: 1.2em;
     text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.25s ease-in-out; }
     .releases footer a:hover {
       color: white; }
 
@@ -361,19 +362,15 @@ a {
     text-transform: uppercase;
     letter-spacing: .1em; }
   .screencast footer {
-    padding-top: 5em;
-    padding-bottom: 5em;
     overflow: hidden;
     clear: left; }
   .screencast .quotes {
-    max-width: 45%;
     margin: 0;
-    float: left;
-    clear: left;
     overflow: hidden;
     text-align: left;
     list-style-type: none; }
     .screencast .quotes .item {
+      margin-bottom: 2em;
       overflow: hidden; }
     .screencast .quotes .avatar {
       width: 55px;
@@ -383,9 +380,7 @@ a {
     .screencast .quotes cite {
       display: block; }
   .screencast .purchase {
-    position: relative;
-    float: right;
-    max-width: 320px; }
+    position: relative; }
     .screencast .purchase .superfluous {
       background-color: white;
       border-radius: 3px;
@@ -418,7 +413,6 @@ a {
       background-image: none, url(../images/radio-checked.svg);
       background-position: 0.7em 0.8em; }
     .screencast .purchase .purchase-option {
-      cursor: pointer;
       border-top: 1px solid transparent;
       border-bottom: 1px solid transparent;
       transition: border 0.5s, padding 0.5s;
@@ -427,6 +421,8 @@ a {
       background-image: none, url(../images/radio-unchecked.svg);
       background-position: 0.9em 0.6em;
       background-repeat: no-repeat; }
+      .screencast .purchase .purchase-option, .screencast .purchase .purchase-option label {
+        cursor: pointer; }
   .screencast .buy {
     display: block;
     margin: 0.75em 1em;

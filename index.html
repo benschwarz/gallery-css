@@ -5,6 +5,7 @@
 		<title>Gallery CSS</title>
 		
 		<link rel="shortcut icon" href="images/favicon.ico">
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" name="viewport">
 
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/narrow.css" media="screen and (max-width: 44em)">
@@ -18,13 +19,13 @@
 	</head>
 	<body>
 		<main role="main">
-			<section class="autoheight gallery items-3">
+			<section class="js-autoheight gallery items-3">
 				<div id="item-1" class="control-operator"></div>
 				<figure class="item introduction">
 					<div class="superfluous">
 						<header>
 							<h1>Gallery</h1>
-							<h2>Pure CSS, not script to be found.</h2>	
+							<h2>Pure CSS, not a script to be found.</h2>	
 						</header>
 					</div>
 				</figure>
@@ -42,7 +43,7 @@
 					<div class="superfluous">
 						<nav>
 							<a href="#item-1"><img src="images/arrow-left.svg" alt="Left pointing arrow"></a>
-							<a href="#item-3"><img src="images/arrow-right.svg" alt="Right pointing arrow"></a>	
+							<a href="#item-3"><img src="images/arrow-right.svg" alt="Right pointing arrow"></a>
 						</nav>
 					</div>
 				</div>
@@ -71,7 +72,7 @@
 				</div>
 			</section>
 				
-			<section id="getting-started" class="autoheight main-module getting-started">
+			<section id="getting-started" class="js-autoheight main-module getting-started">
 				<header>
 					<h1>Get it together</h1>
 					<h2>What you need to get started</h2>	
@@ -79,7 +80,11 @@
 
 				<div class="grid">
 					<ol class="steps">
-						<li><p>Include <code>gallery.css</code> &amp; <code>gallery.theme.css</code></p></li>
+						<li>
+							<p>Include <code>gallery.css</code> &amp; <code>gallery.theme.css</code></p>
+<pre><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/gallery.theme.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/gallery.min.css&quot;&gt;</code></pre>
+						</li>
 						<li>
 								<p>Mark up your gallery</p>
 <pre><code class="language-markup">&lt;div class="gallery items-3"&gt;
@@ -108,12 +113,11 @@
 									<p>Want your gallery to autoplay? <em>Add the <code>.autoplay</code> class!</em></p>
 <pre><code class="language-markup">&lt;div class="gallery autoplay items-3"&gt;</code></pre>
 							</li>
-							<li></li>
 					</ol>
 				</div>
 			</section>
 			
-			<section class="autoheight main-module releases coloured">
+			<section class="js-autoheight main-module releases coloured">
 				<header>
 					<h1>Choose a release</h1>
 					<h2>Download a prefixed or unprefixed build, <br>install <a href="https://github.com/benschwarz/gallery-css#installation">using bower</a>, or <a href="https://github.com/benschwarz/gallery-css#build-instructions">build it yo' self.</a></h2>
@@ -182,12 +186,12 @@
 						<article class="item">
 							<img src="//twimg0-a.akamaihd.net/profile_images/1668225011/Gravatar2.png" alt="Chris Coyier" class="avatar">
 							<q>[GALLERY.CSS is] a great, pure approach, the video is dope, you should watch it.</q>
-							<cite>— Chris Coyier, csstricks.com</cite>
+							<cite><strong>— Chris Coyier</strong>, csstricks.com</cite>
 						</article>
 						<article class="item">
 							<img src="//twimg0-a.akamaihd.net/profile_images/1668225011/Gravatar2.png" alt="Chris Coyier" class="avatar">
 							<q>This rules!</q>
-							<cite>— Some guy, madsite.com</cite>
+							<cite><strong>— Some guy</strong>, madsite.com</cite>
 						</article>
 					</section>
 					
@@ -248,20 +252,18 @@
       });
     }
 
-    if( ! Modernizr.cssvhunit ) {
-    	require(['jquery'], function ( $ ) {
-    		var setSectionHeight = function () {
-					var height = $( window ).height();
-					$( '.autoheight' ).css( 'min-height', height );	
-				};
+  	require(['jquery'], function ( $ ) {
+  		var setSectionHeight = function () {
+				var height = $( window ).height();
+				$( '.js-autoheight' ).css( 'min-height', height );	
+			};
 
-				$( window ).bind( 'resize', function () {
-					setSectionHeight();
-				} );
-			
-				setSectionHeight();	
-    	});
-    }
+			$( window ).bind( 'resize', function () {
+				setSectionHeight();
+			} );
+		
+			setSectionHeight();	
+  	});
 	</script>
 
 	<script src="components/prism/prism.js"></script>

@@ -130,8 +130,6 @@ h2 { @extend %avenir-roman; }
 	.float { animation: float 60s infinite; }
 }
 
-.autoheight { min-height: 100vh; }
-
 .main-module {
 	header {
 		margin: 0 auto;
@@ -159,8 +157,9 @@ h2 { @extend %avenir-roman; }
 		color: rgba(43, 62, 80, .6);
 	}
 
-	.steps { margin: 2em auto; }
+	.steps { margin: 2em auto; padding: 0; list-style-position: inside; }
 	.steps li { margin: 2em 0; }
+	.steps pre { font-size: .9em; }
 }
 
 .releases { 
@@ -173,7 +172,7 @@ h2 { @extend %avenir-roman; }
 
 	.download-options { width: 70vw; margin: 0 auto; margin-top: 5em; overflow: visible; }
 	.download-options h3 { margin: 0; font-size: 2em; text-shadow: 0 2px 0 rgba(0, 0, 0, .1); }
-	.download-options .filesize { @extend %proxima-nova-condensed-light; margin: 0; font-size: 1.2em; font-weight: 600; color: rgba(255, 255, 255, .6); }
+	.download-options .filesize { @extend %proxima-nova-condensed-light-italic; margin: 0; font-size: 1.2em; font-weight: 600; color: rgba(255, 255, 255, .6); }
 	
 	.prefixed, 
 	.unprefixed {
@@ -184,17 +183,22 @@ h2 { @extend %avenir-roman; }
 		&:hover img { transform: scale(1.025); } 
 	}
 
-	footer { @extend %proxima-nova-condensed-light; font-weight: 600; display: table-footer-group; color: rgba(255, 255, 255, .6); }
+	footer { 
+		@extend %proxima-nova-condensed-light-italic; 
+		display: table-footer-group; 
+		color: rgba(255, 255, 255, .6);
+	}
+
 	footer a { 
-		transition: all .25s ease-in-out;
-		display: inline-block; 
+		display: inline-block;
+		margin-top: 3em;
 		font-size: 1.2em;
 		text-decoration: none; 
 		border-bottom: 1px solid rgba(255, 255,  255, .4);
+		
+		transition: all .25s ease-in-out;
 
-		&:hover { 
-			color: white;
-		}
+		&:hover { color: white; }
 	}
 } 
 
@@ -228,27 +232,24 @@ h2 { @extend %avenir-roman; }
 		font-size: .8em; text-transform: uppercase; letter-spacing: .1em;
 	}
 
-	footer { padding-top: 5em; padding-bottom: 5em; overflow: hidden; clear: left; }
+	footer { overflow: hidden; clear: left; }
 
 	.quotes {
-		max-width: 45%;
 		margin: 0;
-		float: left; clear: left;
 		overflow: hidden;
 		text-align: left;
 		list-style-type: none;
 
-		.item { overflow: hidden; }
+		.item { margin-bottom: 2em; overflow: hidden; }
 
 		.avatar { width: 55px; border-radius: 55px; float: left; margin-right: 1em; }
+		q { @extend %proxima-nova-condensed-light-italic; }
 		cite { @extend %proxima-nova-condensed-regular; display: block; }
 	}
 
 	.purchase { 
 		@extend %proxima-nova;
 		position: relative;
-		float: right; 
-		max-width: 320px;
 		
 		.superfluous { 
 			background-color: white;
@@ -296,7 +297,8 @@ h2 { @extend %avenir-roman; }
 		}
 
 		.purchase-option {
-			cursor: pointer;
+			&, label { cursor: pointer; }
+
 			border-top: 1px solid transparent;
 			border-bottom: 1px solid transparent;
 			transition: border .5s, padding .5s;
