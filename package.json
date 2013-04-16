@@ -8,6 +8,8 @@
     "grunt-contrib-sass": "0.2.2",
     "grunt-contrib-watch": "0.3.1",
     "grunt-rework": "0.0.3",
-    "grunt-recess": "~0.3.1"
+    "grunt-recess": "~0.3.1",
+    "grunt-s3": "~0.2.0-alpha",
+    "tilde-expansion": "0.0.0"
   }
 }

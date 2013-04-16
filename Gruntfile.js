@@ -1,6 +1,13 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
+  var tilde = require('tilde-expansion'), 
+      s3Credentials;
+
+  tilde('~/.gallery-css-s3-credentials', function ( path ) {
+    s3Credentials = grunt.file.readJSON( path );
+  }),
+
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -57,11 +64,29 @@ module.exports = function(grunt) {
         src: 'dist/<%= pkg.name %>.prefixed.css',
         dest: 'dist/<%= pkg.name %>.prefixed.min.css'
       }
+    },
+
+    s3: {
+      options: {
+        key: s3Credentials.key,
+        secret: s3Credentials.secret,
+        bucket: 'gallery-css',
+        access: 'public-read'
+      },
+      dist: {
+        upload: [
+          {
+            src: 'dist/*.css',
+            dest: './'
+          }
+        ]
+      }      
     }
   });
 
   // Default task.
   grunt.registerTask('default', ['sass', 'rework', 'csslint', 'recess', 'cssmin']);
+  grunt.registerTask('release', ['default', 's3']);
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-csslint');
@@ -69,4 +94,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-rework');
   grunt.loadNpmTasks('grunt-recess');
+  grunt.loadNpmTasks('grunt-s3');
 };
