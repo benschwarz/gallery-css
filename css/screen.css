@@ -144,6 +144,9 @@ a {
   color: white;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
 
+.gallery .item:first-of-type {
+  position: absolute; }
+
 .superfluous {
   display: table;
   height: 100%;
@@ -264,8 +267,7 @@ a {
 .main-module h1 {
   display: inline-block;
   margin: 2.5em 0 0 0;
-  font-size: 3em;
-  font-size: 3.5vw;
+  font-size: 2em;
   text-transform: uppercase;
   letter-spacing: .2em;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
@@ -273,16 +275,14 @@ a {
   color: white; }
 .main-module.coloured h2 {
   color: white;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 1em;
-  font-size: 2vw; }
+  color: rgba(255, 255, 255, 0.75); }
 
 .getting-started {
   color: #2b3e50; }
   .getting-started h1 {
     color: rgba(43, 62, 80, 0.8); }
   .getting-started h2 {
-    font-size: 2vw;
+    font-size: 1.1em;
     font-weight: 500;
     color: rgba(43, 62, 80, 0.6); }
   .getting-started .steps {
@@ -302,7 +302,7 @@ a {
   color: white;
   background-color: #d36a6a; }
   .releases .download-options {
-    width: 70vw;
+    width: 70%;
     margin: 0 auto;
     margin-top: 5em;
     overflow: visible; }
@@ -317,7 +317,8 @@ a {
     color: rgba(255, 255, 255, 0.6); }
   .releases .prefixed,
   .releases .unprefixed {
-    width: 75%;
+    display: block;
+    margin-bottom: 2em;
     text-decoration: none; }
     .releases .prefixed img,
     .releases .unprefixed img {
@@ -327,7 +328,8 @@ a {
       transform: scale(1.025); }
   .releases footer {
     display: table-footer-group;
-    color: rgba(255, 255, 255, 0.6); }
+    color: rgba(255, 255, 255, 0.6);
+    font-size: .8em; }
   .releases footer a {
     display: inline-block;
     margin-top: 3em;
@@ -340,7 +342,8 @@ a {
 
 .screencast {
   color: white;
-  background-color: #61ba96; }
+  background-color: #61ba96;
+  padding-bottom: 3em; }
   .screencast h3 {
     display: inline-block;
     font-size: 2em;

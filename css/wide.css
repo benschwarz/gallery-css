@@ -27,10 +27,16 @@ html {
 .gallery .secondary-controls a:nth-child(2) {
   margin-right: 1em; }
 
-.introduction h1 {
+.gallery .introduction h1 {
   font-size: 5em; }
-.introduction h2 {
+.gallery .introduction h2 {
   font-size: 2em; }
+
+.main-module h1 {
+  font-size: 3em; }
+
+.main-module h2 {
+  font-size: 1.6em; }
 
 .getting-started .steps {
   max-width: 60%; }

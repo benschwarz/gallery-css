@@ -13,12 +13,17 @@
   a:nth-child(2) { margin-right: 1em; }
 }
 
-.introduction {
+.gallery .introduction {
   h1 { font-size: 5em; }
   h2 { font-size: 2em; }
 }
 
-.getting-started .steps { max-width: 60%; }
+.main-module h1 { font-size: 3em; }
+.main-module h2 { font-size: 1.6em; }
+
+.getting-started {
+  .steps { max-width: 60%; }
+}
 
 .download-options {
   .unprefixed img { margin-left: -2em; }

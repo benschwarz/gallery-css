@@ -19,6 +19,9 @@ h2 { @extend %avenir-roman; }
 	header { color: white; text-shadow: 0 1px 0 rgba(0, 0, 0, .2); }
 }
 
+// Override theme!
+.gallery .item:first-of-type { position: absolute; }
+
 .superfluous { display: table; height: 100%; width: 100%; } 
 
 .introduction {
@@ -40,6 +43,7 @@ h2 { @extend %avenir-roman; }
 }
 
 .gallery .control-operator:nth-of-type(2):target ~ .secondary-controls { display: block; }
+
 .gallery .secondary-controls {
 	display: none;
 	position: absolute;
@@ -136,12 +140,12 @@ h2 { @extend %avenir-roman; }
 	h1 { 
 		display: inline-block; 
 		margin: 2.5em 0 0 0;
-		font-size: 3em; font-size: 3.5vw;
+		font-size: 2em;
 		text-transform: uppercase; letter-spacing: .2em;
 		text-shadow: 0 2px 0 rgba(0, 0, 0, .1);
 	}
 	&.coloured h1 { color: white; }
-	&.coloured h2 { color: white; color: rgba(255, 255, 255, .75); font-size: 1em; font-size: 2vw; }
+	&.coloured h2 { color: white; color: rgba(255, 255, 255, .75); }
 }
 
 .getting-started {
@@ -149,7 +153,7 @@ h2 { @extend %avenir-roman; }
 
 	h1 { color: rgba(43, 62, 80, .8); }
 	h2 { 
-		font-size: 2vw;
+		font-size: 1.1em;
 		font-weight: 500; 
 		color: rgba(43, 62, 80, .6);
 	}
@@ -167,13 +171,14 @@ h2 { @extend %avenir-roman; }
 	color: white;
 	background-color: #d36a6a;
 
-	.download-options { width: 70vw; margin: 0 auto; margin-top: 5em; overflow: visible; }
+	.download-options { width: 70%; margin: 0 auto; margin-top: 5em; overflow: visible; }
 	.download-options h3 { margin: 0; font-size: 2em; text-shadow: 0 2px 0 rgba(0, 0, 0, .1); }
 	.download-options .filesize { @extend %proxima-nova-condensed-light-italic; margin: 0; font-size: 1.2em; font-weight: 600; color: rgba(255, 255, 255, .6); }
 	
 	.prefixed, 
 	.unprefixed {
-		width: 75%;		
+		display: block;
+		margin-bottom: 2em;
 		text-decoration: none;
 		
 		img { transition: all .25s; }
@@ -184,6 +189,7 @@ h2 { @extend %avenir-roman; }
 		@extend %proxima-nova-condensed-light-italic; 
 		display: table-footer-group; 
 		color: rgba(255, 255, 255, .6);
+		font-size: .8em;
 	}
 
 	footer a { 
@@ -202,6 +208,7 @@ h2 { @extend %avenir-roman; }
 .screencast { 
 	color: white;
 	background-color: $screencast-color;
+	padding-bottom: 3em;
 
 	h3 { 
 		@extend %proxima-nova-light;
