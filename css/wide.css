@@ -4,13 +4,16 @@
 html {
   font-family: sans-serif; }
 
-.grid {
+.grid, .small-grid {
   margin: 0 auto;
   max-width: 1260px;
   padding: 0 4%;
   font-family: Layout; }
-  .grid > * {
+  .grid > *, .small-grid > * {
     font-family: sans-serif; }
+
+.small-grid {
+  max-width: 1008px; }
 
 .getting-started .steps {
   max-width: 60%; }
@@ -34,9 +37,9 @@ html {
   padding-bottom: 5em; }
 
 .quotes {
-  max-width: 400px;
+  max-width: 50%;
   float: left; }
 
 .purchase {
   float: right;
-  max-width: 400px; }
+  max-width: 50%; }

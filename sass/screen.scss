@@ -286,30 +286,37 @@ h2 { @extend %avenir-roman; }
 		}
 
 		input:not(#oldIE):checked + .purchase-option {
+			// transitioned property
 			border-color: $screencast-color;
+
 			font-weight: bold;
 			padding: .7em 1.2em .7em 2.7em;
 
-			background-image: url(../images/radio-checked.png);
-			background-image: none, url(../images/radio-checked.svg);
-
 			background-position: .7em .8em;
+
+			// transitioned property
+			background-size: 14px 14px, 0 0, 20px 20px;
 		}
 
 		.purchase-option {
 			&, label { cursor: pointer; }
 
+			// transitioned property
 			border-top: 1px solid transparent;
 			border-bottom: 1px solid transparent;
-			transition: border .5s, padding .5s;
 
+			transition: border .5s, padding .5s, background-size .5s cubic-bezier(0, 1.5, .9, 1);
+			
+			// transitioned property
 			padding: .3em 1.2em .3em 2.7em;
 
-			background-image: url(../images/radio-unchecked.png);
-			background-image: none, url(../images/radio-unchecked.svg);
+			background-image: url(../images/radio-checked.png);
+			background-image: none, url(../images/radio-unchecked.svg), url(../images/radio-checked.svg);
 			
 			background-position: .9em .6em;
 			background-repeat: no-repeat;
+											// none     unchecked  checked starting point
+			background-size: 14px 14px, 14px 14px, 0 0;
 		}
 	}
 

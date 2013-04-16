@@ -1,6 +1,7 @@
 @import 'grid';
 
 .grid { @extend %grid; }
+.small-grid { @extend %grid; max-width: $grid-max-width / 1.25; }
 
 .getting-started .steps { max-width: 60%; }
 
@@ -26,5 +27,5 @@
   padding-bottom: 5em; 
 }
 
-.quotes { max-width: 400px; float: left; }
-.purchase { float: right; max-width: 400px; }
+.quotes { max-width: 50%; float: left; }
+.purchase { float: right; max-width: 50%; }
