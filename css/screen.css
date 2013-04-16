@@ -176,11 +176,13 @@ a {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 2; }
+  z-index: 2;
+  pointer-events: none; }
   .gallery .secondary-controls nav {
     display: table-cell;
     vertical-align: middle; }
   .gallery .secondary-controls a {
+    pointer-events: auto;
     height: 60px;
     width: 60px;
     border-radius: 60px;
