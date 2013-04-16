@@ -17,12 +17,20 @@ module.exports = function(grunt) {
       tasks: ['sass']
     },
     sass: {
-      dist: {
+      main: {
+        options: {
+          style: 'expanded',
+          precision: 1
+        },
+        files: {
+          'dist/<%= pkg.name %>.css': 'sass/<%= pkg.name %>.build.scss'
+        }
+      },
+      theme: {
         options: {
           style: 'expanded'
         },
         files: {
-          'dist/<%= pkg.name %>.css': 'sass/<%= pkg.name %>.build.scss',
           'dist/<%= pkg.name %>.theme.css': 'sass/<%= pkg.name %>.theme.scss'
         }
       }
