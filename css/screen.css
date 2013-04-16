@@ -414,14 +414,12 @@ a {
     .screencast .purchase input:not(#oldIE):checked + .purchase-option {
       border-color: #61ba96;
       font-weight: bold;
-      padding: 0.7em 1.2em 0.7em 2.7em;
       background-position: 0.7em 50%;
       background-size: 14px 14px, 0 0, 20px 20px; }
     .screencast .purchase .purchase-option {
       border-top: 1px solid transparent;
       border-bottom: 1px solid transparent;
       transition: border 0.5s, background-size 0.5s cubic-bezier(0, 1.5, 0.9, 1);
-      padding: 0.7em 1.2em 0.7em 2.7em;
       background-image: url(../images/radio-checked.png);
       background-image: none, url(../images/radio-unchecked.svg), url(../images/radio-checked.svg);
       background-position: 0.9em 50%;
@@ -429,6 +427,9 @@ a {
       background-size: 14px 14px, 14px 14px, 0 0; }
       .screencast .purchase .purchase-option, .screencast .purchase .purchase-option label {
         cursor: pointer; }
+    .screencast .purchase label {
+      display: block;
+      padding: 0.7em 1.2em 0.7em 2.7em; }
   .screencast .buy {
     display: block;
     margin: 0.75em 1em;
