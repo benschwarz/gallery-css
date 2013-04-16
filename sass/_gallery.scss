@@ -11,10 +11,10 @@
 	}
 
 	@keyframes galleryAnimation-#{$item-count} {
-	  0% { opacity: 0; }
+	  0% { pointer-events: none; opacity: 0; }
 	  #{100% * $transition-duration / $total-duration},
 	  #{100% * $display-duration / $total-duration} { opacity: 1; }
-	  #{100% * ($display-duration + $transition-duration) / $total-duration} { opacity: 0; }
+	  #{100% * ($display-duration + $transition-duration) / $total-duration} { pointer-events: auto; opacity: 0; }
 	}
 
 	.items-#{$item-count} { 
@@ -42,7 +42,7 @@
 
 	.control-operator { display: none; } // Stop hash links from scrolling up and down
 	
-	.control-operator:target ~ .item { opacity: 0; animation: none; } // Unselected image
-	.control-operator:target + .item { opacity: 1; } // Selected image
+	.control-operator:target ~ .item { pointer-events: none; opacity: 0; animation: none; } // Unselected image
+	.control-operator:target + .item { pointer-events: auto; opacity: 1; } // Selected image
 	.control-operator:target ~ .controls .control-button { animation: none; } // Kill button animation when there is a selected image
 }

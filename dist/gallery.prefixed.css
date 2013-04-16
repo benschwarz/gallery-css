@@ -40,6 +40,7 @@
 }
 
 .gallery .control-operator:target ~ .item {
+  pointer-events: none;
   opacity: 0;
   -moz-animation: none;
   -webkit-animation: none;
@@ -48,6 +49,7 @@
 }
 
 .gallery .control-operator:target + .item {
+  pointer-events: auto;
   opacity: 1
 }
 
@@ -77,6 +79,7 @@
 
 @keyframes galleryAnimation-2 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -85,6 +88,7 @@
   }
 
   64.28571% {
+    pointer-events: auto;
     opacity: 0
   }
 }
@@ -138,6 +142,7 @@
 
 @keyframes galleryAnimation-3 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -146,6 +151,7 @@
   }
 
   42.85714% {
+    pointer-events: auto;
     opacity: 0
   }
 }
@@ -207,6 +213,7 @@
 
 @keyframes galleryAnimation-4 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -215,6 +222,7 @@
   }
 
   32.14286% {
+    pointer-events: auto;
     opacity: 0
   }
 }
@@ -284,6 +292,7 @@
 
 @keyframes galleryAnimation-5 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -292,6 +301,7 @@
   }
 
   25.71429% {
+    pointer-events: auto;
     opacity: 0
   }
 }
@@ -403,6 +413,7 @@
 
 @-moz-keyframes galleryAnimation-2 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -411,12 +422,14 @@
   }
 
   64.28571% {
+    pointer-events: auto;
     opacity: 0
   }
 }
 
 @-webkit-keyframes galleryAnimation-2 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -425,12 +438,14 @@
   }
 
   64.28571% {
+    pointer-events: auto;
     opacity: 0
   }
 }
 
 @-o-keyframes galleryAnimation-2 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -439,6 +454,7 @@
   }
 
   64.28571% {
+    pointer-events: auto;
     opacity: 0
   }
 }
@@ -496,6 +512,7 @@
 
 @-moz-keyframes galleryAnimation-3 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -504,12 +521,14 @@
   }
 
   42.85714% {
+    pointer-events: auto;
     opacity: 0
   }
 }
 
 @-webkit-keyframes galleryAnimation-3 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -518,12 +537,14 @@
   }
 
   42.85714% {
+    pointer-events: auto;
     opacity: 0
   }
 }
 
 @-o-keyframes galleryAnimation-3 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -532,6 +553,7 @@
   }
 
   42.85714% {
+    pointer-events: auto;
     opacity: 0
   }
 }
@@ -589,6 +611,7 @@
 
 @-moz-keyframes galleryAnimation-4 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -597,12 +620,14 @@
   }
 
   32.14286% {
+    pointer-events: auto;
     opacity: 0
   }
 }
 
 @-webkit-keyframes galleryAnimation-4 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -611,12 +636,14 @@
   }
 
   32.14286% {
+    pointer-events: auto;
     opacity: 0
   }
 }
 
 @-o-keyframes galleryAnimation-4 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -625,6 +652,7 @@
   }
 
   32.14286% {
+    pointer-events: auto;
     opacity: 0
   }
 }
@@ -682,6 +710,7 @@
 
 @-moz-keyframes galleryAnimation-5 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -690,12 +719,14 @@
   }
 
   25.71429% {
+    pointer-events: auto;
     opacity: 0
   }
 }
 
 @-webkit-keyframes galleryAnimation-5 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -704,12 +735,14 @@
   }
 
   25.71429% {
+    pointer-events: auto;
     opacity: 0
   }
 }
 
 @-o-keyframes galleryAnimation-5 {
   0% {
+    pointer-events: none;
     opacity: 0
   }
 
@@ -718,6 +751,7 @@
   }
 
   25.71429% {
+    pointer-events: auto;
     opacity: 0
   }
 }
