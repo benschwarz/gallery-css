@@ -15,6 +15,23 @@ html {
 .small-grid {
   max-width: 1008px; }
 
+.gallery header {
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2); }
+
+.gallery .custom-controls header {
+  padding: 0;
+  font-size: 1.5em; }
+
+.gallery .secondary-controls a:nth-child(1) {
+  margin-left: 1em; }
+.gallery .secondary-controls a:nth-child(2) {
+  margin-right: 1em; }
+
+.introduction h1 {
+  font-size: 5em; }
+.introduction h2 {
+  font-size: 2em; }
+
 .getting-started .steps {
   max-width: 60%; }
 

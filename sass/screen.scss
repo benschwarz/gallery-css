@@ -16,10 +16,7 @@ h2 { @extend %avenir-roman; }
 	.custom-controls { background: #73C16F; }
 	// .animations { background: #D83827; }
 
-	header {
-		color: white;
-		text-shadow: 0 3px 0 rgba(0, 0, 0, .2);
-	}
+	header { color: white; text-shadow: 0 1px 0 rgba(0, 0, 0, .2); }
 }
 
 .superfluous { display: table; height: 100%; width: 100%; } 
@@ -27,8 +24,8 @@ h2 { @extend %avenir-roman; }
 .introduction {
 	header { display: table-cell; vertical-align: middle; }
 	
-	h1 { margin: 0; font-size: 5em; letter-spacing: 3px; }
-	h2 { @extend %avenir-light; margin: 0; font-size: 2em; color: rgba(255, 255, 255, .75); }
+	h1 { margin: 0; font-size: 3em; letter-spacing: 3px; }
+	h2 { @extend %avenir-light; margin: 0; font-size: 1em; color: rgba(255, 255, 255, .75); }
 }
 
 .gallery .custom-controls {
@@ -36,8 +33,9 @@ h2 { @extend %avenir-roman; }
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;
+		padding: 0 25%;
 
-		font-size: 1.5em;	
+		font-size: .7em;	
 	}
 }
 
@@ -73,10 +71,10 @@ h2 { @extend %avenir-roman; }
 
 	a img { margin-top: .1em; }
 
-	a:nth-child(1) { float: left; margin-left: 1em; }
+	a:nth-child(1) { float: left; margin-left: .2em; }
 	a:nth-child(1) img { margin-right: .1em; }
 	
-	a:nth-child(2) { float: right; margin-right: 1em; }
+	a:nth-child(2) { float: right; margin-right: .2em; }
 	a:nth-child(2) img { margin-left: .1em; }
 }
 
@@ -279,7 +277,7 @@ h2 { @extend %avenir-roman; }
 		input:not(#oldIE) { 
 			position: absolute;
 			float: left;
-			margin: .5em 0 0 1.15em;
+			margin: 1.1em 0 0 0.95em;
 			width: 14px;
 			height: 14px;
 			opacity: 0;
@@ -292,7 +290,7 @@ h2 { @extend %avenir-roman; }
 			font-weight: bold;
 			padding: .7em 1.2em .7em 2.7em;
 
-			background-position: .7em .8em;
+			background-position: .7em 50%;
 
 			// transitioned property
 			background-size: 14px 14px, 0 0, 20px 20px;
@@ -305,15 +303,15 @@ h2 { @extend %avenir-roman; }
 			border-top: 1px solid transparent;
 			border-bottom: 1px solid transparent;
 
-			transition: border .5s, padding .5s, background-size .5s cubic-bezier(0, 1.5, .9, 1);
+			transition: border .5s, background-size .5s cubic-bezier(0, 1.5, .9, 1);
 			
 			// transitioned property
-			padding: .3em 1.2em .3em 2.7em;
+			padding: .7em 1.2em .7em 2.7em;
 
 			background-image: url(../images/radio-checked.png);
 			background-image: none, url(../images/radio-unchecked.svg), url(../images/radio-checked.svg);
 			
-			background-position: .9em .6em;
+			background-position: .9em 50%;
 			background-repeat: no-repeat;
 											// none     unchecked  checked starting point
 			background-size: 14px 14px, 14px 14px, 0 0;
