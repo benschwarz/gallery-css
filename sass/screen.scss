@@ -2,7 +2,7 @@
 @import 'sass/fonts';
 @import 'sass/animations';
 
-* { -webkit-font-smoothing: antialiased; }
+* { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 body { @extend %proxima-nova; line-height: 1.5; }
 
 a { color: inherit; }
@@ -180,9 +180,10 @@ h2 { @extend %avenir-roman; }
 		display: block;
 		margin-bottom: 2em;
 		text-decoration: none;
+
+		transition: all .25s;
 		
-		img { transition: all .25s; }
-		&:hover img { transform: scale(1.025); } 
+		&:hover { transform: scale(1.025); } 
 	}
 
 	footer { 
@@ -322,6 +323,8 @@ h2 { @extend %avenir-roman; }
 			display: block;
 			padding: 0.7em 1.2em 0.7em 2.7em;
 		}
+
+		span { float: right; }
 	}
 
 	.buy {

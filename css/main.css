@@ -875,7 +875,8 @@ body, .screencast .purchase, footer[role="contentinfo"] h3, footer[role="content
     background: #ac39ac; } }
 
 * {
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
 
 body {
   line-height: 1.5; }
@@ -1070,12 +1071,10 @@ a {
   .releases .unprefixed {
     display: block;
     margin-bottom: 2em;
-    text-decoration: none; }
-    .releases .prefixed img,
-    .releases .unprefixed img {
-      transition: all 0.25s; }
-    .releases .prefixed:hover img,
-    .releases .unprefixed:hover img {
+    text-decoration: none;
+    transition: all 0.25s; }
+    .releases .prefixed:hover,
+    .releases .unprefixed:hover {
       transform: scale(1.025); }
   .releases footer {
     display: table-footer-group;
@@ -1181,6 +1180,8 @@ a {
     .screencast .purchase label {
       display: block;
       padding: 0.7em 1.2em 0.7em 2.7em; }
+    .screencast .purchase span {
+      float: right; }
   .screencast .buy {
     display: block;
     margin: 0.75em 1em;
