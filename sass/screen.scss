@@ -338,6 +338,8 @@ h2 { @extend %avenir-roman; }
 
 		transition: all .25s ease-in-out;
 
+		display: none;
+		&.selected { display: block; }
 		&:hover { box-shadow: 0 0 0 3px rgba(0, 0, 0, .1); }
 	}
 

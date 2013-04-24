@@ -1193,7 +1193,10 @@ a {
     text-align: center;
     text-decoration: none;
     background-color: #61ba96;
-    transition: all 0.25s ease-in-out; }
+    transition: all 0.25s ease-in-out;
+    display: none; }
+    .screencast .buy.selected {
+      display: block; }
     .screencast .buy:hover {
       box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1); }
   .screencast .not-convinced {
