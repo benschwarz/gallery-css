@@ -19,7 +19,7 @@ body, .screencast .purchase, footer[role="contentinfo"] h3, footer[role="content
 .releases .download-options .filesize, .releases footer, .screencast .quotes q {
   font-family: 'ProximaNW15-CdLightIt'; }
 
-.screencast .quotes cite, .screencast .not-convinced {
+.screencast .quotes cite, .screencast .third-party {
   font-family: 'Proxima N W15 Cd Reg'; }
 
 @font-face {
@@ -448,7 +448,13 @@ a {
       display: block; }
     .screencast .buy:hover {
       box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1); }
-  .screencast .not-convinced {
+  .screencast input[value="one"]:checked ~ .buy.one {
+    display: block; }
+  .screencast input[value="three"]:checked ~ .buy.three {
+    display: block; }
+  .screencast input[value="five"]:checked ~ .buy.five {
+    display: block; }
+  .screencast .third-party {
     display: block;
     margin: 0.6em 0;
     font-weight: 300;
