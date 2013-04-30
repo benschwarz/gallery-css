@@ -842,37 +842,18 @@ body, .screencast .purchase, footer[role="contentinfo"] h3, footer[role="content
 
 @keyframes sway {
   from {
-    transform: rotate(5deg);
+    transform: rotate(3deg);
     transform-origin: 50% 0%; }
 
   to {
-    transform: rotate(-5deg); } }
+    transform: rotate(-3deg); } }
 
 @keyframes float {
   from {
-    transform: translate3d(120%, 500%, 0); }
+    transform: translate3d(120%, 0, 0); }
 
   to {
-    transform: translate3d(-60%, -100%, 0); } }
-
-@keyframes backgroundCycle {
-  0% {
-    background: #ac3939; }
-
-  20% {
-    background: #acac39; }
-
-  40% {
-    background: #39ac39; }
-
-  60% {
-    background: #39acac; }
-
-  80% {
-    background: #3939ac; }
-
-  100% {
-    background: #ac39ac; } }
+    transform: translate3d(-60%, 0, 0); } }
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -892,6 +873,9 @@ a {
   text-align: center; }
 .gallery .custom-controls {
   background: #73C16F; }
+.gallery .animations {
+  background: url(/images/background.jpg) no-repeat;
+  background-size: cover; }
 .gallery header {
   color: white;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
@@ -963,55 +947,47 @@ a {
   .gallery .secondary-controls a:nth-child(2) img {
     margin-left: .1em; }
 
-.gallery .animations .superfluous {
-  animation: backgroundCycle 60s alternate both infinite; }
 .gallery .animations header {
   display: table-cell;
   vertical-align: middle;
-  z-index: 1; }
+  z-index: 1;
+  text-align: center; }
 .gallery .animations h1 {
-  font-size: 7em;
+  font-size: 2.5em;
   font-weight: 600; }
-.gallery .animations .cloud {
-  position: absolute;
-  top: 5%;
-  font-size: 400%; }
-  .gallery .animations .cloud:nth-of-type(1) {
-    right: 20%; }
-  .gallery .animations .cloud:nth-of-type(2) {
-    right: 30%;
-    top: 7%; }
-  .gallery .animations .cloud:nth-of-type(3) {
-    right: 35%; }
 .gallery .animations .balloon {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.9);
   position: absolute;
   width: 100px;
-  top: 0; }
+  bottom: 20%; }
   .gallery .animations .balloon:nth-of-type(1) {
-    font-size: 1500%;
+    font-size: 700%;
     right: 40%; }
   .gallery .animations .balloon:nth-of-type(2) {
-    font-size: 800%;
+    font-size: 500%;
     right: 20%;
-    -webkit-filter: blur(0.5px);
-    -moz-filter: blur(0.5px);
-    -ms-filter: blur(0.5px);
-    -o-filter: blur(0.5px);
-    filter: blur(0.5px); }
+    -webkit-filter: blur(0.7px);
+    -moz-filter: blur(0.7px);
+    -ms-filter: blur(0.7px);
+    -o-filter: blur(0.7px);
+    filter: blur(0.7px); }
     .gallery .animations .balloon:nth-of-type(2) .float, .gallery .animations .balloon:nth-of-type(2) .sway {
       animation-delay: -2s; }
   .gallery .animations .balloon:nth-of-type(3) {
-    font-size: 300%;
-    right: 32%;
-    -webkit-filter: blur(1px);
-    filter: blur(1px); }
+    font-size: 200%;
+    right: 80%;
+    bottom: 32%;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -ms-filter: blur(2px);
+    -o-filter: blur(2px);
+    filter: blur(2px); }
     .gallery .animations .balloon:nth-of-type(3) .float, .gallery .animations .balloon:nth-of-type(3) .sway {
       animation-delay: -3.5s; }
 .gallery .animations .sway {
   animation: sway 3s ease-in-out infinite alternate; }
 .gallery .animations .float {
-  animation: float 60s infinite; }
+  animation: float 1.5m infinite; }
 
 .main-module header {
   margin: 0 auto;
@@ -1199,12 +1175,6 @@ a {
       display: block; }
     .screencast .buy:hover {
       box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1); }
-  .screencast input[value="one"]:checked ~ .buy.one {
-    display: block; }
-  .screencast input[value="three"]:checked ~ .buy.three {
-    display: block; }
-  .screencast input[value="five"]:checked ~ .buy.five {
-    display: block; }
   .screencast .third-party {
     display: block;
     margin: 0.6em 0;

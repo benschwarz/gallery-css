@@ -14,7 +14,22 @@ h2 { @extend %avenir-roman; }
 	.item { height: 100%; text-rendering: optimizeLegibility; }
 	.introduction { background: #4D87E2; text-align: center; }
 	.custom-controls { background: #73C16F; }
-	// .animations { background: #D83827; }
+	.animations { 
+		// background-image: -webkit-linear-gradient(bottom, 
+		// 	rgba(255,255,204,0.6) 0%,
+		// 	rgba(253,250,211,0.65) 10%,
+		// 	rgba(220,223,204,0.66) 20%,
+		// 	rgba(165,180,187,0.67) 30%,
+		// 	rgba(131,152,173,0.74) 40%,
+		// 	rgba(128,149,170,0.72) 40%,
+		// 	rgba(102,120,153,0.7) 60%,
+		// 	rgba(84,109,140,0.78) 70%,
+		// 	rgba(48,74,111,0.81) 80%,
+		// 	rgba(40,63,101,0.92) 90%), 
+		// url('/images/noise.png');
+		background: url(/images/background.jpg) no-repeat;
+		background-size: cover;
+	}
 
 	header { color: white; text-shadow: 0 1px 0 rgba(0, 0, 0, .2); }
 }
@@ -82,53 +97,50 @@ h2 { @extend %avenir-roman; }
 }
 
 .gallery .animations {
-	.superfluous { animation: backgroundCycle 60s alternate both infinite; }
+	//.superfluous { animation: backgroundCycle 60s alternate both infinite; }
 
 	header {
 		display: table-cell;
 		vertical-align: middle;
 		z-index: 1;
+
+		text-align: center;
 	}
 
-	h1 { font-size: 7em; font-weight: 600; }
-
-	.cloud { 
-		position: absolute; top: 5%; font-size: 400%;
-
-		&:nth-of-type(1) { right: 20%; }
-		&:nth-of-type(2) { right: 30%; top: 7%; }
-		&:nth-of-type(3) { right: 35%; }
-	}
+	h1 { font-size: 2.5em; font-weight: 600; }
 
 	.balloon {
-		color: rgba(0, 0, 0, .8);
-		position: absolute; width: 100px; top: 0;
+		color: rgba(0, 0, 0, .9);
+		position: absolute; width: 100px; bottom: 20%;
 
-		&:nth-of-type(1) { font-size: 1500%; right: 40%; }
+		&:nth-of-type(1) { font-size: 700%; right: 40%; }
 		&:nth-of-type(2) { 
-			font-size: 800%; 
+			font-size: 500%; 
 			right: 20%;
-			-webkit-filter: blur(.5px);
-			   -moz-filter: blur(.5px);
-			    -ms-filter:	blur(.5px);
-			     -o-filter:	blur(.5px);
-							filter: blur(.5px); 
+			-webkit-filter: blur(.7px);
+			   -moz-filter: blur(.7px);
+			    -ms-filter:	blur(.7px);
+			     -o-filter:	blur(.7px);
+							filter: blur(.7px); 
 
 			.float, .sway { animation-delay: -2s; }
 		}
 		
 		&:nth-of-type(3) { 
-			font-size: 300%; 
-			right: 32%; 
-			-webkit-filter: blur(1px); 
-							filter: blur(1px);
+			font-size: 200%; 
+			right: 80%; bottom: 32%;
+			-webkit-filter: blur(2px);
+			   -moz-filter: blur(2px);
+			    -ms-filter:	blur(2px);
+			     -o-filter:	blur(2px);
+							filter: blur(2px); 
 
 			.float, .sway { animation-delay: -3.5s; }
 		}
 	}
 
 	.sway { animation: sway 3s ease-in-out infinite alternate; }
-	.float { animation: float 60s infinite; }
+	.float { animation: float 1.5m infinite; }
 }
 
 .main-module {

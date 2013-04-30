@@ -1,26 +1,26 @@
 @keyframes sway {
   from { 
-    transform: rotate(5deg); 
+    transform: rotate(3deg); 
     transform-origin: 50% 0%;
   }
-  to { transform: rotate(-5deg); }
+  to { transform: rotate(-3deg); }
 }
 
 @keyframes float {
-  from { transform: translate3d(120%, 500%, 0); }
-  to { transform: translate3d(-60%, -100%, 0); }
+  from { transform: translate3d(120%, 0, 0); }
+  to { transform: translate3d(-60%, 0, 0); }
 }
 
 // 0% { background: #61ba96; }
 // 33% { background: #d36a6a; }
 // 66% { background: #b16bd1; }
 
-@keyframes backgroundCycle {
+// @keyframes backgroundCycle {
 
-  0% { background: rgb(172, 57, 57); }
-  20% { background: rgb(172, 172, 57); }
-  40% { background: rgb(57, 172, 57); }
-  60% { background: rgb(57, 172, 172); }
-  80% { background: rgb(57, 57, 172); }
-  100% { background: rgb(172, 57, 172); }
-}
+//   0% { background: rgb(172, 57, 57); }
+//   20% { background: rgb(172, 172, 57); }
+//   40% { background: rgb(57, 172, 57); }
+//   60% { background: rgb(57, 172, 172); }
+//   80% { background: rgb(57, 57, 172); }
+//   100% { background: rgb(172, 57, 172); }
+// }

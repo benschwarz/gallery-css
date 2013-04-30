@@ -19,7 +19,7 @@ html {
   text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2); }
 
 .gallery .custom-controls header {
-  padding: 0;
+  padding: 0 15%;
   font-size: 1.5em; }
 
 .gallery .secondary-controls a:nth-child(1) {
