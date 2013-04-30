@@ -874,7 +874,7 @@ a {
 .gallery .custom-controls {
   background: #73C16F; }
 .gallery .animations {
-  background: url(/images/background.jpg) no-repeat;
+  background: url(../images/background.jpg) no-repeat;
   background-size: cover; }
 .gallery header {
   color: white;
