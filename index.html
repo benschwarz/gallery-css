@@ -242,7 +242,7 @@
   	require(['jquery'], function ( $ ) {
   		var setSectionHeight = function () {
 				var height = $( window ).height();
-				$( '.js-autoheight' ).css( 'min-height', height );	
+				$( '.js-autoheight' ).css( 'min-height', (height/100*95) );	
 			};
 
 			$( window ).bind( 'resize', function () {
