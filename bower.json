@@ -1,0 +1,13 @@
+{
+  "name": "gallery",
+  "repo": "benschwarz/gallery-css",
+  "version": "1.0.0",
+  "main": [
+    "dist/gallery.css",
+    "dist/gallery.min.css",
+    "dist/gallery.prefixed.css",
+    "dist/gallery.prefixed.min.css",
+    "dist/gallery.theme.css"
+  ],
+  "license": "MIT"
+}
