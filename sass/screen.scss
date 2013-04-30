@@ -102,9 +102,10 @@ h2 { @extend %avenir-roman; }
 	header {
 		display: table-cell;
 		vertical-align: middle;
-		z-index: 1;
 
 		text-align: center;
+
+		h1 { position: relative; z-index: 1; }
 	}
 
 	h1 { font-size: 2.5em; font-weight: 600; }

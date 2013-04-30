@@ -199,8 +199,10 @@ a {
 .gallery .animations header {
   display: table-cell;
   vertical-align: middle;
-  z-index: 1;
   text-align: center; }
+  .gallery .animations header h1 {
+    position: relative;
+    z-index: 1; }
 .gallery .animations h1 {
   font-size: 2.5em;
   font-weight: 600; }
