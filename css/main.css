@@ -991,6 +991,15 @@ a {
 .gallery .animations .float {
   animation: float 1.5m infinite; }
 
+.share {
+  background: whiteSmoke;
+  border-bottom: 1px solid #cecece;
+  padding: 1em 0;
+  text-align: center; }
+  .share .share-button {
+    display: inline-block;
+    margin: 0 1em; }
+
 .main-module header {
   margin: 0 auto;
   text-align: center; }

@@ -86,6 +86,26 @@ Buy my screencast and I'll love you forever.
 					<a href="#item-3" class="control-button">•</a>
 				</div>
 			</section>
+
+			<div class="share">
+				<iframe class="share-button" src="http://ghbtns.com/github-btn.html?user=benschwarz&repo=gallery-css&type=watch"
+  allowtransparency="true" frameborder="0" scrolling="0" width="50" height="20"></iframe>
+
+				<a href="https://twitter.com/share" class="share-button twitter-share-button" data-via="benschwarz" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+				<!-- Place this tag where you want the +1 button to render. -->
+				<div class="share-button"><div class="g-plusone" data-annotation="none"></div></div>
+
+				<!-- Place this tag after the last +1 button tag. -->
+				<script type="text/javascript">
+				  (function() {
+				    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				    po.src = 'https://apis.google.com/js/plusone.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				  })();
+				</script>
+			</div>
 				
 			<section id="getting-started" class="js-autoheight main-module getting-started">
 				<header>
@@ -260,7 +280,7 @@ Buy my screencast and I'll love you forever.
   	require(['jquery'], function ( $ ) {
   		var setSectionHeight = function () {
 				var height = $( window ).height();
-				$( '.js-autoheight' ).css( 'min-height', (height/100*95) );	
+				$( '.js-autoheight' ).css( 'min-height', (height/100*90) );	
 			};
 
 			$( window ).bind( 'resize', function () {
