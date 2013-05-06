@@ -89,18 +89,25 @@ module.exports = function(grunt) {
           }
         ]
       }      
+    },
+    connect: {
+      server: {
+        options: {
+          port: 3000,
+          base: './'
+        }
+      }
     }
   });
 
   // Default task.
   grunt.registerTask('default', ['sass', 'rework', 'csslint', 'recess', 'cssmin']);
+
+  // Use for development
+  grunt.registerTask('dev', ['connect', 'watch']);
+
+  // S3 credentials required to run this
   grunt.registerTask('release', ['default', 's3']);
 
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-csslint');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-rework');
-  grunt.loadNpmTasks('grunt-recess');
-  grunt.loadNpmTasks('grunt-s3');
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 };
