@@ -262,16 +262,18 @@ h2 { @extend %avenir-roman; }
 	footer { overflow: hidden; clear: left; }
 
 	.quotes {
+		@extend %proxima-nova-condensed-regular;
+		-webkit-font-smoothing: auto;
+
 		margin: 0;
 		overflow: hidden;
-		text-align: left;
 		list-style-type: none;
 
-		.item { margin-bottom: 2em; overflow: hidden; }
+		text-align: left;
 
-		.avatar { width: 55px; border-radius: 55px; float: left; margin-right: 1em; }
-		q { @extend %proxima-nova-condensed-light-italic; }
-		cite { @extend %proxima-nova-condensed-regular; display: block; }
+		.quote { margin-bottom: 2em; overflow: hidden; clear: left; }
+		.avatar { width: 55px; border-radius: 55px; float: left; margin-right: 1em; }	
+		cite { @extend %proxima-nova-condensed-light-italic; font-style: normal; display: block; }
 	}
 
 	.purchase { 
