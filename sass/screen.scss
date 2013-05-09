@@ -352,7 +352,6 @@ h2 { @extend %avenir-roman; }
 	}
 
 	.buy {
-		display: block;
 		margin: .75em 1em;
 		padding: .8em 0;
 		font-size: 1em; font-weight: 600;
@@ -365,11 +364,10 @@ h2 { @extend %avenir-roman; }
 		display: none;
 		&.selected { display: block; }
 		&:hover { box-shadow: 0 0 0 3px rgba(0, 0, 0, .1); }
-	}
 
-	// @each $option in one, three, five {
-	// 	input[value="#{$option}"]:checked ~ .buy.#{$option} { display: block; }	
-	// }
+		img { display: inline-block; vertical-align: text-top; margin-right: .8em; }
+		span { float: none; }
+	}
 	
 	.third-party { @extend %proxima-nova-condensed-regular; display: block; margin: .6em 0; font-weight: 300; font-size: .8em; }
 }
