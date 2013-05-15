@@ -19,7 +19,7 @@
 	  100% { opacity: 0; }
 	}
 
-	.items-#{$item-count} { 
+	.items-#{$item-count} {
 		&.autoplay .control-button { animation: controlAnimation-#{$item-count} #{$total-duration}s infinite; }
 		&.autoplay .item { animation: galleryAnimation-#{$item-count} #{$total-duration}s infinite; }
 
@@ -28,7 +28,7 @@
 			.control-operator:nth-of-type(#{$j}):target ~ .controls .control-button:nth-of-type(#{$j}) { @extend %active-button; }
 
 			.control-button:nth-of-type(#{$j}),
-			.item:nth-of-type(#{$j}) { 
+			.item:nth-of-type(#{$j}) {
 				$delay: #{($j - 1) * ($display-duration) - $transition-duration}s;
 
 				animation-delay: #{$delay};
@@ -42,7 +42,7 @@
 	.item { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .5s; }
 
 	.control-operator { display: none; } // Stop hash links from scrolling up and down
-	
+
 	.control-operator:target ~ .item { pointer-events: none; opacity: 0; animation: none; } // Unselected image
 
 	.control-button:first-of-type { @extend %active-button; }
