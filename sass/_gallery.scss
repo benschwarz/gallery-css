@@ -1,38 +1,74 @@
 @import "variables";
 
+// overflow -%'ages
+@function overflow($percentage) {
+	$percentage: if($percentage <= 100%, $percentage, 100%);
+	@return if($percentage >= 0, $percentage, 100% + $percentage);
+}
+
+// pseudo animation-delay using animation-keyframes
+@function animation-keyframes($item-count, $iteration) {
+	$single-transition-duration: $transition-duration / 2;
+	$total-duration: ($item-display-duration * $item-count) + $single-transition-duration;
+
+	$end-display: ($total-duration - $single-transition-duration) * ($iteration / $item-count);
+	$start-display: $end-display - $item-display-duration;
+	$start-transition: $start-display - $single-transition-duration;
+	$end-transition: $end-display + $single-transition-duration;
+
+	@return (0%,
+		overflow(percentage($start-transition / $total-duration) - 0.1),
+		overflow(percentage($start-display / $total-duration)),
+		overflow(percentage($end-display / $total-duration)),
+		overflow(percentage($end-transition / $total-duration) + 0.1),
+		100%);
+}
+
+@mixin displayed-animation-keyframes($item-count, $iteration) {
+	$stops: animation-keyframes($item-count, $iteration);
+	#{nth($stops, 3)} { @content; }
+	#{nth($stops, 4)} { @content; }
+
+	@if($iteration == 1) {
+		#{nth(animation-keyframes($item-count, $item-count), 4)} { @content; }
+		#{nth($stops, 6)} { @content; }
+	}
+}
+
+@mixin hidden-animation-keyframes($item-count, $iteration) {
+	$stops: animation-keyframes($item-count, $iteration);
+	#{nth($stops, 1)} { @content; }
+	#{nth($stops, 2)} { @content; }
+	#{nth($stops, 5)} { @content; }
+	#{nth($stops, 6)} { @content; }
+}
+
 @mixin gallery( $item-count ) {
 	$total-duration: $display-duration * $item-count;
 
-	@keyframes controlAnimation-#{$item-count} {
-		0% { @include inactive-button; }
-	  #{100% * $transition-duration / $total-duration},
-	  #{100% * $display-duration / $total-duration} { @include active-button; }
-	  #{100% * ($display-duration + $transition-duration) / $total-duration},
-	  100% { @include inactive-button; }
+	// animation keyframes for each item to fake animation-delay
+	@for $k from 1 through $item-count {
+		@keyframes controlAnimation-#{$item-count}-#{$k} {
+			@include hidden-animation-keyframes($item-count, $k) { @include inactive-button; };
+			@include displayed-animation-keyframes($item-count, $k) { @include active-button; };
+		}
+
+		@keyframes galleryAnimation-#{$item-count}-#{$k} {
+			@include hidden-animation-keyframes($item-count, $k) { opacity: 0; };
+			@include displayed-animation-keyframes($item-count, $k) { opacity: 1; };
+		}
 	}
 
-	@keyframes galleryAnimation-#{$item-count} {
-	  0% { opacity: 0; }
-	  #{100% * $transition-duration / $total-duration},
-	  #{100% * $display-duration / $total-duration} { opacity: 1; }
-	  #{100% * ($display-duration + $transition-duration) / $total-duration},
-	  100% { opacity: 0; }
-	}
-
-	.items-#{$item-count} { 
-		&.autoplay .control-button { animation: controlAnimation-#{$item-count} #{$total-duration}s infinite; }
-		&.autoplay .item { animation: galleryAnimation-#{$item-count} #{$total-duration}s infinite; }
+	.items-#{$item-count} {
+		&.autoplay .control-button { animation-play-state: running; }
+		&.autoplay .item { animation-play-state: running; }
 
 		@for $j from 1 through $item-count {
 			.control-operator:nth-of-type(#{$j}):target ~ .item:nth-of-type(#{$j}) { pointer-events: auto; opacity: 1; }
 			.control-operator:nth-of-type(#{$j}):target ~ .controls .control-button:nth-of-type(#{$j}) { @extend %active-button; }
 
-			.control-button:nth-of-type(#{$j}),
-			.item:nth-of-type(#{$j}) { 
-				$delay: #{($j - 1) * ($display-duration) - $transition-duration}s;
-
-				animation-delay: #{$delay};
-			}
+			&.autoplay .control-button:nth-of-type(#{$j}) { animation: controlAnimation-#{$item-count}-#{$j} #{$total-duration}s infinite; }
+			&.autoplay .item:nth-of-type(#{$j}) { animation: galleryAnimation-#{$item-count}-#{$j} #{$total-duration}s infinite; }
 		}
 	}
 }
@@ -42,9 +78,14 @@
 	.item { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .5s; }
 
 	.control-operator { display: none; } // Stop hash links from scrolling up and down
-	
+
 	.control-operator:target ~ .item { pointer-events: none; opacity: 0; animation: none; } // Unselected image
 
 	.control-button:first-of-type { @extend %active-button; }
 	.control-operator:target ~ .controls .control-button { @extend %inactive-button; animation: none; } // Kill button animation when there is a selected image
+
+	// Pause animations when hovering on a gallery item
+	&.autoplay:hover {
+		.item, .control-button { animation-play-state: paused; }
+	}
 }

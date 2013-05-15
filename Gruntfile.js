@@ -57,6 +57,7 @@ module.exports = function(grunt) {
         use: [
           ['rework.keyframes'],
           ['rework.prefix', 'animation'],
+          ['rework.prefix', 'animation-play-state'],
           ['rework.prefix', 'animation-delay'],
           ['rework.prefix', 'transition']
         ],
