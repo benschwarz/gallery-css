@@ -114,6 +114,13 @@ body {
 a {
   color: inherit; }
 
+.gallery .ribbon {
+  position: absolute;
+  display: inline-block;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  width: auto; }
 .gallery .item {
   height: 100%;
   text-rendering: optimizeLegibility; }

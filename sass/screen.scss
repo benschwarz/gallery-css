@@ -7,15 +7,16 @@ body { @extend %proxima-nova; line-height: 1.5; }
 
 a { color: inherit; }
 
-h1 { @extend %avenir-heavy; } 
+h1 { @extend %avenir-heavy; }
 h2 { @extend %avenir-roman; }
 
 .gallery {
+	.ribbon { position: absolute; display: inline-block; z-index: 3; top: 0; right: 0;  width: auto; }
 	.item { height: 100%; text-rendering: optimizeLegibility; }
 	.introduction { background: #4D87E2; text-align: center; }
 	.custom-controls { background: #73C16F; }
-	.animations { 
-		// background-image: -webkit-linear-gradient(bottom, 
+	.animations {
+		// background-image: -webkit-linear-gradient(bottom,
 		// 	rgba(255,255,204,0.6) 0%,
 		// 	rgba(253,250,211,0.65) 10%,
 		// 	rgba(220,223,204,0.66) 20%,
@@ -25,7 +26,7 @@ h2 { @extend %avenir-roman; }
 		// 	rgba(102,120,153,0.7) 60%,
 		// 	rgba(84,109,140,0.78) 70%,
 		// 	rgba(48,74,111,0.81) 80%,
-		// 	rgba(40,63,101,0.92) 90%), 
+		// 	rgba(40,63,101,0.92) 90%),
 		// url('/images/noise.png');
 		background: url(../images/background.jpg) no-repeat;
 		background-size: cover;
@@ -368,7 +369,7 @@ h2 { @extend %avenir-roman; }
 		img { display: inline-block; vertical-align: text-top; margin-right: .8em; }
 		span { float: none; }
 	}
-	
+
 	.third-party { @extend %proxima-nova-condensed-regular; display: block; margin: .6em 0; font-weight: 300; font-size: .8em; }
 }
 
@@ -378,11 +379,11 @@ footer[role="contentinfo"] {
 
 	.wrapper { padding: 2em 0; }
 
-	.icon-gallery { 
+	.icon-gallery {
 		margin-right: .15em; margin-top: -.2em;
-		float: left; 
-		color: $screencast-color; 
-		font-size: 350%; 
+		float: left;
+		color: $screencast-color;
+		font-size: 350%;
 
 		-webkit-filter: drop-shadow(0 3px 0 rgba(0, 0, 0, .1));
 		-moz-filter: 		drop-shadow(0 3px 0 rgba(0, 0, 0, .1));
@@ -392,7 +393,7 @@ footer[role="contentinfo"] {
 	}
 
 	h3 { font-size: .9em; margin: 0; }
-	p { 
+	p {
 		font-size: .7em; margin: 0;
 		a { font-weight: 700; }
 	}
