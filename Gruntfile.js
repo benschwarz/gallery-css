@@ -58,6 +58,7 @@ module.exports = function(grunt) {
           ['rework.keyframes'],
           ['rework.prefix', 'animation'],
           ['rework.prefix', 'animation-delay'],
+          ['rework.prefix', 'animation-play-state'],
           ['rework.prefix', 'transition']
         ],
         vendors: ['-moz-', '-webkit-', '-o-']

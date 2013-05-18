@@ -34,18 +34,18 @@
 }
 
 @keyframes controlAnimation-2 {
-  0% {
+  0%,
+  35.7% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4);
   }
 
-  14.3%,
-  50% {
+  50%,
+  85.7% {
     color: white;
     color: rgba(255, 255, 255, 0.8);
   }
 
-  64.3%,
   100% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4);
@@ -53,16 +53,16 @@
 }
 
 @keyframes galleryAnimation-2 {
-  0% {
+  0%,
+  35.7% {
     opacity: 0;
   }
 
-  14.3%,
-  50% {
+  50%,
+  85.7% {
     opacity: 1;
   }
 
-  64.3%,
   100% {
     opacity: 0;
   }
@@ -74,13 +74,16 @@
 .items-2.autoplay .item {
   animation: galleryAnimation-2 14s infinite;
 }
+.items-2.autoplay:hover .item {
+  animation-play-state: paused;
+}
 .items-2 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
   pointer-events: auto;
   opacity: 1;
 }
 .items-2 .control-button:nth-of-type(1),
 .items-2 .item:nth-of-type(1) {
-  animation-delay: -2s;
+  animation-delay: -9s;
 }
 .items-2 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
   pointer-events: auto;
@@ -88,22 +91,22 @@
 }
 .items-2 .control-button:nth-of-type(2),
 .items-2 .item:nth-of-type(2) {
-  animation-delay: 5s;
+  animation-delay: -2s;
 }
 
 @keyframes controlAnimation-3 {
-  0% {
+  0%,
+  57.1% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4);
   }
 
-  9.5%,
-  33.3% {
+  66.7%,
+  90.5% {
     color: white;
     color: rgba(255, 255, 255, 0.8);
   }
 
-  42.9%,
   100% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4);
@@ -111,16 +114,16 @@
 }
 
 @keyframes galleryAnimation-3 {
-  0% {
+  0%,
+  57.1% {
     opacity: 0;
   }
 
-  9.5%,
-  33.3% {
+  66.7%,
+  90.5% {
     opacity: 1;
   }
 
-  42.9%,
   100% {
     opacity: 0;
   }
@@ -132,13 +135,16 @@
 .items-3.autoplay .item {
   animation: galleryAnimation-3 21s infinite;
 }
+.items-3.autoplay:hover .item {
+  animation-play-state: paused;
+}
 .items-3 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
   pointer-events: auto;
   opacity: 1;
 }
 .items-3 .control-button:nth-of-type(1),
 .items-3 .item:nth-of-type(1) {
-  animation-delay: -2s;
+  animation-delay: -16s;
 }
 .items-3 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
   pointer-events: auto;
@@ -146,7 +152,7 @@
 }
 .items-3 .control-button:nth-of-type(2),
 .items-3 .item:nth-of-type(2) {
-  animation-delay: 5s;
+  animation-delay: -9s;
 }
 .items-3 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
   pointer-events: auto;
@@ -154,22 +160,22 @@
 }
 .items-3 .control-button:nth-of-type(3),
 .items-3 .item:nth-of-type(3) {
-  animation-delay: 12s;
+  animation-delay: -2s;
 }
 
 @keyframes controlAnimation-4 {
-  0% {
+  0%,
+  67.9% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4);
   }
 
-  7.1%,
-  25% {
+  75%,
+  92.9% {
     color: white;
     color: rgba(255, 255, 255, 0.8);
   }
 
-  32.1%,
   100% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4);
@@ -177,16 +183,16 @@
 }
 
 @keyframes galleryAnimation-4 {
-  0% {
+  0%,
+  67.9% {
     opacity: 0;
   }
 
-  7.1%,
-  25% {
+  75%,
+  92.9% {
     opacity: 1;
   }
 
-  32.1%,
   100% {
     opacity: 0;
   }
@@ -198,13 +204,16 @@
 .items-4.autoplay .item {
   animation: galleryAnimation-4 28s infinite;
 }
+.items-4.autoplay:hover .item {
+  animation-play-state: paused;
+}
 .items-4 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
   pointer-events: auto;
   opacity: 1;
 }
 .items-4 .control-button:nth-of-type(1),
 .items-4 .item:nth-of-type(1) {
-  animation-delay: -2s;
+  animation-delay: -23s;
 }
 .items-4 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
   pointer-events: auto;
@@ -212,7 +221,7 @@
 }
 .items-4 .control-button:nth-of-type(2),
 .items-4 .item:nth-of-type(2) {
-  animation-delay: 5s;
+  animation-delay: -16s;
 }
 .items-4 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
   pointer-events: auto;
@@ -220,7 +229,7 @@
 }
 .items-4 .control-button:nth-of-type(3),
 .items-4 .item:nth-of-type(3) {
-  animation-delay: 12s;
+  animation-delay: -9s;
 }
 .items-4 .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4) {
   pointer-events: auto;
@@ -228,22 +237,22 @@
 }
 .items-4 .control-button:nth-of-type(4),
 .items-4 .item:nth-of-type(4) {
-  animation-delay: 19s;
+  animation-delay: -2s;
 }
 
 @keyframes controlAnimation-5 {
-  0% {
+  0%,
+  74.3% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4);
   }
 
-  5.7%,
-  20% {
+  80%,
+  94.3% {
     color: white;
     color: rgba(255, 255, 255, 0.8);
   }
 
-  25.7%,
   100% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4);
@@ -251,16 +260,16 @@
 }
 
 @keyframes galleryAnimation-5 {
-  0% {
+  0%,
+  74.3% {
     opacity: 0;
   }
 
-  5.7%,
-  20% {
+  80%,
+  94.3% {
     opacity: 1;
   }
 
-  25.7%,
   100% {
     opacity: 0;
   }
@@ -272,13 +281,16 @@
 .items-5.autoplay .item {
   animation: galleryAnimation-5 35s infinite;
 }
+.items-5.autoplay:hover .item {
+  animation-play-state: paused;
+}
 .items-5 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
   pointer-events: auto;
   opacity: 1;
 }
 .items-5 .control-button:nth-of-type(1),
 .items-5 .item:nth-of-type(1) {
-  animation-delay: -2s;
+  animation-delay: -30s;
 }
 .items-5 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
   pointer-events: auto;
@@ -286,7 +298,7 @@
 }
 .items-5 .control-button:nth-of-type(2),
 .items-5 .item:nth-of-type(2) {
-  animation-delay: 5s;
+  animation-delay: -23s;
 }
 .items-5 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
   pointer-events: auto;
@@ -294,7 +306,7 @@
 }
 .items-5 .control-button:nth-of-type(3),
 .items-5 .item:nth-of-type(3) {
-  animation-delay: 12s;
+  animation-delay: -16s;
 }
 .items-5 .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4) {
   pointer-events: auto;
@@ -302,7 +314,7 @@
 }
 .items-5 .control-button:nth-of-type(4),
 .items-5 .item:nth-of-type(4) {
-  animation-delay: 19s;
+  animation-delay: -9s;
 }
 .items-5 .control-operator:nth-of-type(5):target ~ .item:nth-of-type(5) {
   pointer-events: auto;
@@ -310,5 +322,5 @@
 }
 .items-5 .control-button:nth-of-type(5),
 .items-5 .item:nth-of-type(5) {
-  animation-delay: 26s;
+  animation-delay: -2s;
 }
