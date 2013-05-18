@@ -4,32 +4,33 @@
 	$total-duration: $display-duration * $item-count;
 
 	@keyframes controlAnimation-#{$item-count} {
-		0% { @include inactive-button; }
-	  #{100% * $transition-duration / $total-duration},
-	  #{100% * $display-duration / $total-duration} { @include active-button; }
-	  #{100% * ($display-duration + $transition-duration) / $total-duration},
+		0%,
+	  #{100% - 100% * ($display-duration + $transition-duration) / $total-duration} { @include inactive-button; }
+	  #{100% - 100% * $display-duration / $total-duration},
+	  #{100% - 100% * $transition-duration / $total-duration} { @include active-button; }
 	  100% { @include inactive-button; }
 	}
 
 	@keyframes galleryAnimation-#{$item-count} {
-	  0% { opacity: 0; }
-	  #{100% * $transition-duration / $total-duration},
-	  #{100% * $display-duration / $total-duration} { opacity: 1; }
-	  #{100% * ($display-duration + $transition-duration) / $total-duration},
+	  0%,
+	  #{100% - 100% * ($display-duration + $transition-duration) / $total-duration} { opacity: 0; }
+	  #{100% - 100% * $display-duration / $total-duration},
+	  #{100% - 100% * $transition-duration / $total-duration} { opacity: 1; }
 	  100% { opacity: 0; }
 	}
 
-	.items-#{$item-count} { 
+	.items-#{$item-count} {
 		&.autoplay .control-button { animation: controlAnimation-#{$item-count} #{$total-duration}s infinite; }
 		&.autoplay .item { animation: galleryAnimation-#{$item-count} #{$total-duration}s infinite; }
+		&.autoplay:hover .item { animation-play-state: paused; }
 
 		@for $j from 1 through $item-count {
 			.control-operator:nth-of-type(#{$j}):target ~ .item:nth-of-type(#{$j}) { pointer-events: auto; opacity: 1; }
 			.control-operator:nth-of-type(#{$j}):target ~ .controls .control-button:nth-of-type(#{$j}) { @extend %active-button; }
 
 			.control-button:nth-of-type(#{$j}),
-			.item:nth-of-type(#{$j}) { 
-				$delay: #{($j - 1) * ($display-duration) - $transition-duration}s;
+			.item:nth-of-type(#{$j}) {
+				$delay: #{-($item-count - $j) * ($display-duration) - $transition-duration}s;
 
 				animation-delay: #{$delay};
 			}
