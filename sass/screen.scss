@@ -273,22 +273,24 @@ h2 { @extend %avenir-roman; }
 		text-align: left;
 
 		.quote { margin-bottom: 2em; overflow: hidden; clear: left; }
-		.avatar { width: 55px; border-radius: 55px; float: left; margin-right: 1em; }	
+		.avatar { width: 55px; border-radius: 55px; float: left; margin-right: 1em; }
 		cite { @extend %proxima-nova-condensed-light-italic; font-style: normal; display: block; }
+		.gallery { min-height: 400px; }
+		.quote-body { float: left; width: 300px; }
 	}
 
-	.purchase { 
+	.purchase {
 		@extend %proxima-nova;
 		position: relative;
-		
-		.superfluous { 
+
+		.superfluous {
 			background-color: white;
 			border-radius: 3px;
 			color: $screencast-color;
 			box-shadow: 0 3px 0 rgba(0, 0, 0, .1);
 		}
 
-		header { 
+		header {
 			text-align: left;
 			padding: .7em 1.2em;
 		}
@@ -306,7 +308,7 @@ h2 { @extend %avenir-roman; }
 			list-style-position: inside;
 		}
 
-		input:not(#oldIE) { 
+		input:not(#oldIE) {
 			position: absolute;
 			float: left;
 			margin: 1.1em 0 0 0.95em;
@@ -337,7 +339,7 @@ h2 { @extend %avenir-roman; }
 
 			background-image: url(../images/radio-checked.png);
 			background-image: none, url(../images/radio-unchecked.svg), url(../images/radio-checked.svg);
-			
+
 			background-position: .9em 50%;
 			background-repeat: no-repeat;
 											// none     unchecked  checked starting point

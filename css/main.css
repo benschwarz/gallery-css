@@ -938,7 +938,7 @@ a {
     text-decoration: none;
     text-align: center;
     background: rgba(0, 0, 0, 0.1);
-    transition: all 0.25s; }
+    transition: all .25s; }
     .gallery .secondary-controls a:hover {
       transform: scale(1.1); }
   .gallery .secondary-controls a img {
@@ -1066,7 +1066,7 @@ a {
     display: block;
     margin-bottom: 2em;
     text-decoration: none;
-    transition: all 0.25s; }
+    transition: all .25s; }
     .releases .prefixed:hover,
     .releases .unprefixed:hover {
       transform: scale(1.025); }
@@ -1080,7 +1080,7 @@ a {
     font-size: 1.2em;
     text-decoration: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    transition: all 0.25s ease-in-out; }
+    transition: all .25s ease-in-out; }
     .releases footer a:hover {
       color: white; }
 
@@ -1132,6 +1132,11 @@ a {
     .screencast .quotes cite {
       font-style: normal;
       display: block; }
+    .screencast .quotes .gallery {
+      min-height: 400px; }
+    .screencast .quotes .quote-body {
+      float: left;
+      width: 300px; }
   .screencast .purchase {
     position: relative; }
     .screencast .purchase .superfluous {
@@ -1141,7 +1146,7 @@ a {
       box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1); }
     .screencast .purchase header {
       text-align: left;
-      padding: 0.7em 1.2em; }
+      padding: .7em 1.2em; }
     .screencast .purchase h3 {
       margin: 0;
       border: 0;
@@ -1161,15 +1166,15 @@ a {
     .screencast .purchase input:not(#oldIE):checked + .purchase-option {
       border-color: #61ba96;
       font-weight: bold;
-      background-position: 0.7em 50%;
+      background-position: .7em 50%;
       background-size: 14px 14px, 0 0, 20px 20px; }
     .screencast .purchase .purchase-option {
       border-top: 1px solid transparent;
       border-bottom: 1px solid transparent;
-      transition: border 0.5s, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
+      transition: border .5s, background-position .2s ease-in-out, background-size .2s ease-in-out;
       background-image: url(../images/radio-checked.png);
       background-image: none, url(../images/radio-unchecked.svg), url(../images/radio-checked.svg);
-      background-position: 0.9em 50%;
+      background-position: .9em 50%;
       background-repeat: no-repeat;
       background-size: 14px 14px, 14px 14px, 0 0; }
       .screencast .purchase .purchase-option, .screencast .purchase .purchase-option label {
@@ -1180,8 +1185,8 @@ a {
     .screencast .purchase span {
       float: right; }
   .screencast .buy {
-    margin: 0.75em 1em;
-    padding: 0.8em 0;
+    margin: .75em 1em;
+    padding: .8em 0;
     font-size: 1em;
     font-weight: 600;
     border-radius: 3px;
@@ -1189,7 +1194,7 @@ a {
     text-align: center;
     text-decoration: none;
     background-color: #61ba96;
-    transition: all 0.25s ease-in-out;
+    transition: all .25s ease-in-out;
     display: none; }
     .screencast .buy.selected {
       display: block; }
@@ -1203,7 +1208,7 @@ a {
       float: none; }
   .screencast .third-party {
     display: block;
-    margin: 0.6em 0;
+    margin: .6em 0;
     font-weight: 300;
     font-size: .8em; }
 
