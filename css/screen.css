@@ -19,7 +19,7 @@ body, .screencast .purchase, footer[role="contentinfo"] h3, footer[role="content
 .releases .download-options .filesize, .releases footer, .screencast .quotes cite {
   font-family: 'ProximaNW15-CdLightIt'; }
 
-.screencast .quotes, .screencast .third-party {
+.screencast .quotes {
   font-family: 'Proxima N W15 Cd Reg'; }
 
 @font-face {
@@ -395,46 +395,25 @@ a {
       box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1); }
     .screencast .purchase header {
       text-align: left;
-      padding: .7em 1.2em; }
+      padding: 1.2em 1.2em .7em 1.2em; }
     .screencast .purchase h3 {
       margin: 0;
       border: 0;
+      width: 60%;
+      font-size: 1.4em;
+      line-height: 1.1;
       color: #61ba96; }
     .screencast .purchase .details {
       margin: 0;
       padding: 0;
       font-size: .9em;
       list-style-position: inside; }
-    .screencast .purchase input:not(#oldIE) {
-      position: absolute;
-      float: left;
-      margin: 1.1em 0 0 0.95em;
-      width: 14px;
-      height: 14px;
-      opacity: 0; }
-    .screencast .purchase input:not(#oldIE):checked + .purchase-option {
-      border-color: #61ba96;
-      font-weight: bold;
-      background-position: .7em 50%;
-      background-size: 14px 14px, 0 0, 20px 20px; }
-    .screencast .purchase .purchase-option {
-      border-top: 1px solid transparent;
-      border-bottom: 1px solid transparent;
-      transition: border .5s, background-position .2s ease-in-out, background-size .2s ease-in-out;
-      background-image: url(../images/radio-checked.png);
-      background-image: none, url(../images/radio-unchecked.svg), url(../images/radio-checked.svg);
-      background-position: .9em 50%;
-      background-repeat: no-repeat;
-      background-size: 14px 14px, 14px 14px, 0 0; }
-      .screencast .purchase .purchase-option, .screencast .purchase .purchase-option label {
-        cursor: pointer; }
-    .screencast .purchase label {
-      display: block;
-      padding: 0.7em 1.2em 0.7em 2.7em; }
-    .screencast .purchase span {
-      float: right; }
+    .screencast .purchase .price {
+      float: right;
+      font-weight: 800;
+      font-size: 2.4em; }
   .screencast .buy {
-    margin: .75em 1em;
+    margin: .75em 0;
     padding: .8em 0;
     font-size: 1em;
     font-weight: 600;
@@ -455,11 +434,6 @@ a {
       margin-right: .8em; }
     .screencast .buy span {
       float: none; }
-  .screencast .third-party {
-    display: block;
-    margin: .6em 0;
-    font-weight: 300;
-    font-size: .8em; }
 
 footer[role="contentinfo"] .wrapper {
   padding: 2em 0; }

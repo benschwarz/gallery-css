@@ -38,11 +38,11 @@ h2 { @extend %avenir-roman; }
 // Override theme!
 .gallery .item:first-of-type { position: absolute; }
 
-.superfluous { display: table; height: 100%; width: 100%; } 
+.superfluous { display: table; height: 100%; width: 100%; }
 
 .introduction {
 	header { display: table-cell; vertical-align: middle; }
-	
+
 	h1 { margin: 0; font-size: 3em; letter-spacing: 3px; }
 	h2 { @extend %avenir-light; margin: 0; font-size: 1em; color: rgba(255, 255, 255, .75); }
 }
@@ -54,7 +54,7 @@ h2 { @extend %avenir-roman; }
 		text-align: center;
 		padding: 0 25%;
 
-		font-size: .7em;	
+		font-size: .7em;
 	}
 }
 
@@ -70,13 +70,13 @@ h2 { @extend %avenir-roman; }
 
 	nav { display: table-cell; vertical-align: middle; }
 
-	a { 
+	a {
 		pointer-events: auto;
 		height: 60px;
 		width: 60px;
-		 
+
 		border-radius: 60px;
-		
+
 		color: rgba(255, 255, 255, .6);
 		font-size: 3em;
 		font-weight: bold;
@@ -92,7 +92,7 @@ h2 { @extend %avenir-roman; }
 
 	a:nth-child(1) { float: left; margin-left: .2em; }
 	a:nth-child(1) img { margin-right: .1em; }
-	
+
 	a:nth-child(2) { float: right; margin-right: .2em; }
 	a:nth-child(2) img { margin-left: .1em; }
 }
@@ -116,26 +116,26 @@ h2 { @extend %avenir-roman; }
 		position: absolute; width: 100px; bottom: 20%;
 
 		&:nth-of-type(1) { font-size: 700%; right: 40%; }
-		&:nth-of-type(2) { 
-			font-size: 500%; 
+		&:nth-of-type(2) {
+			font-size: 500%;
 			right: 20%;
 			-webkit-filter: blur(.7px);
 			   -moz-filter: blur(.7px);
 			    -ms-filter:	blur(.7px);
 			     -o-filter:	blur(.7px);
-							filter: blur(.7px); 
+							filter: blur(.7px);
 
 			.float, .sway { animation-delay: -2s; }
 		}
-		
-		&:nth-of-type(3) { 
-			font-size: 200%; 
+
+		&:nth-of-type(3) {
+			font-size: 200%;
 			right: 80%; bottom: 32%;
 			-webkit-filter: blur(2px);
 			   -moz-filter: blur(2px);
 			    -ms-filter:	blur(2px);
 			     -o-filter:	blur(2px);
-							filter: blur(2px); 
+							filter: blur(2px);
 
 			.float, .sway { animation-delay: -3.5s; }
 		}
@@ -160,8 +160,8 @@ h2 { @extend %avenir-roman; }
 		text-align: center;
 	}
 
-	h1 { 
-		display: inline-block; 
+	h1 {
+		display: inline-block;
 		margin: 2.5em 0 0 0;
 		font-size: 2em;
 		text-transform: uppercase; letter-spacing: .2em;
@@ -175,9 +175,9 @@ h2 { @extend %avenir-roman; }
 	color: #2b3e50;
 
 	h1 { color: rgba(43, 62, 80, .8); }
-	h2 { 
+	h2 {
 		font-size: 1.1em;
-		font-weight: 500; 
+		font-weight: 500;
 		color: rgba(43, 62, 80, .6);
 	}
 
@@ -186,9 +186,9 @@ h2 { @extend %avenir-roman; }
 	.steps pre { font-size: .9em; }
 }
 
-.releases { 
-	display: table; 
-	width: 100%; 
+.releases {
+	display: table;
+	width: 100%;
 	padding-bottom: 3em;
 	text-align: center;
 	color: white;
@@ -197,44 +197,44 @@ h2 { @extend %avenir-roman; }
 	.download-options { width: 70%; margin: 0 auto; margin-top: 5em; overflow: visible; }
 	.download-options h3 { margin: 0; font-size: 2em; text-shadow: 0 2px 0 rgba(0, 0, 0, .1); }
 	.download-options .filesize { @extend %proxima-nova-condensed-light-italic; margin: 0; font-size: 1.2em; font-weight: 600; color: rgba(255, 255, 255, .6); }
-	
-	.prefixed, 
+
+	.prefixed,
 	.unprefixed {
 		display: block;
 		margin-bottom: 2em;
 		text-decoration: none;
 
 		transition: all .25s;
-		
-		&:hover { transform: scale(1.025); } 
+
+		&:hover { transform: scale(1.025); }
 	}
 
-	footer { 
-		@extend %proxima-nova-condensed-light-italic; 
-		display: table-footer-group; 
+	footer {
+		@extend %proxima-nova-condensed-light-italic;
+		display: table-footer-group;
 		color: rgba(255, 255, 255, .6);
 		font-size: .8em;
 	}
 
-	footer a { 
+	footer a {
 		display: inline-block;
 		margin-top: 3em;
 		font-size: 1.2em;
-		text-decoration: none; 
+		text-decoration: none;
 		border-bottom: 1px solid rgba(255, 255,  255, .4);
-		
+
 		transition: all .25s ease-in-out;
 
 		&:hover { color: white; }
 	}
-} 
+}
 
-.screencast { 
+.screencast {
 	color: white;
 	background-color: $screencast-color;
 	padding-bottom: 3em;
 
-	h3 { 
+	h3 {
 		@extend %proxima-nova-light;
 		display: inline-block;
 		font-size: 2em;
@@ -246,15 +246,15 @@ h2 { @extend %avenir-roman; }
 	.learnings { text-align: center; }
 	.learnings ul { padding: 0; }
 
-	.learnings li { 
+	.learnings li {
 		margin-top: 3em;
 		width: 50%; display: inline-block; vertical-align: top;
-		list-style-type: none; 
+		list-style-type: none;
 	}
 
 	.learnings i { font-size: 350%; }
-	.learnings p { 
-		@extend %proxima-nova-semibold; 
+	.learnings p {
+		@extend %proxima-nova-semibold;
 
 		margin: 0;
 		font-size: .8em; text-transform: uppercase; letter-spacing: .1em;
@@ -292,12 +292,15 @@ h2 { @extend %avenir-roman; }
 
 		header {
 			text-align: left;
-			padding: .7em 1.2em;
+			padding: 1.2em 1.2em .7em 1.2em;
 		}
 
 		h3 {
 			margin: 0;
 			border: 0;
+			width: 60%;
+			font-size: 1.4em;
+			line-height: 1.1;
 			color: $screencast-color;
 		}
 
@@ -307,55 +310,15 @@ h2 { @extend %avenir-roman; }
 			font-size: .9em;
 			list-style-position: inside;
 		}
-
-		input:not(#oldIE) {
-			position: absolute;
-			float: left;
-			margin: 1.1em 0 0 0.95em;
-			width: 14px;
-			height: 14px;
-			opacity: 0;
+		.price {
+			float: right;
+			font-weight: 800;
+			font-size: 2.4em;
 		}
-
-		input:not(#oldIE):checked + .purchase-option {
-			// transitioned property
-			border-color: $screencast-color;
-
-			font-weight: bold;
-			background-position: .7em 50%;
-
-			// transitioned property
-			background-size: 14px 14px, 0 0, 20px 20px;
-		}
-
-		.purchase-option {
-			&, label { cursor: pointer; }
-
-			// transitioned property
-			border-top: 1px solid transparent;
-			border-bottom: 1px solid transparent;
-
-			transition: border .5s, background-position .2s ease-in-out, background-size .2s ease-in-out;
-
-			background-image: url(../images/radio-checked.png);
-			background-image: none, url(../images/radio-unchecked.svg), url(../images/radio-checked.svg);
-
-			background-position: .9em 50%;
-			background-repeat: no-repeat;
-											// none     unchecked  checked starting point
-			background-size: 14px 14px, 14px 14px, 0 0;
-		}
-
-		label {
-			display: block;
-			padding: 0.7em 1.2em 0.7em 2.7em;
-		}
-
-		span { float: right; }
 	}
 
 	.buy {
-		margin: .75em 1em;
+		margin: .75em 0;
 		padding: .8em 0;
 		font-size: 1em; font-weight: 600;
 		border-radius: 3px;

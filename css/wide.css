@@ -56,11 +56,10 @@ html {
   width: 25%; }
 
 .screencast footer {
-  padding-top: 5em;
-  padding-bottom: 5em; }
+  padding-top: 5em; }
 
 .quotes {
-  max-width: 50%;
+  width: 50%;
   float: left; }
 
 .purchase {
