@@ -3,7 +3,7 @@
 .grid { @extend %grid; }
 .small-grid { @extend %grid; max-width: $grid-max-width / 1.25; }
 
-.gallery header { text-shadow: 0 3px 0 rgba(0, 0, 0, .2); } 
+.gallery header { text-shadow: 0 3px 0 rgba(0, 0, 0, .2); }
 
 .gallery .custom-controls {
   header { padding: 0 15%; font-size: 1.5em; }
@@ -28,8 +28,8 @@
 .download-options {
   .unprefixed img { margin-left: -2em; }
 
-  .prefixed, 
-  .unprefixed { 
+  .prefixed,
+  .unprefixed {
     width: 50%;
     float: left;
   }
