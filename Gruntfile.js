@@ -12,6 +12,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    clean: ['dist/*.css'],
     watch: {
       files: ['sass/*.scss', 'index.html'],
       tasks: ['sass']
@@ -51,16 +52,20 @@ module.exports = function(grunt) {
         src: ['dist/<%= pkg.name %>.css', 'dist/<%= pkg.name %>.theme.css']
       }
     },
-    rework: {
-      'dist/<%= pkg.name %>.prefixed.css': 'dist/<%= pkg.name %>.css',
-      options: {
-        use: [
-          ['rework.keyframes'],
-          ['rework.prefix', 'animation'],
-          ['rework.prefix', 'animation-delay'],
-          ['rework.prefix', 'transition']
-        ],
-        vendors: ['-moz-', '-webkit-', '-o-']
+    autoprefixer: {
+      build: {
+        options: {
+          browsers: ['last 2 versions', '> 1%']
+        },
+        files: [
+          {
+            src : ['**/*.css', '!**/*prefixed.css'],
+            cwd : 'dist',
+            dest : 'dist',
+            ext : '.prefixed.css',
+            expand : true
+          }
+        ]
       }
     },
     cssmin: {
@@ -73,7 +78,6 @@ module.exports = function(grunt) {
         dest: 'dist/<%= pkg.name %>.prefixed.min.css'
       }
     },
-
     s3: {
       options: {
         key: s3Credentials.key,
@@ -101,7 +105,7 @@ module.exports = function(grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', ['sass', 'rework', 'csslint', 'recess', 'cssmin']);
+  grunt.registerTask('default', ['clean', 'sass', 'autoprefixer', 'csslint', 'recess', 'cssmin']);
 
   // Use for development
   grunt.registerTask('dev', ['connect', 'watch']);
