@@ -1,7 +1,7 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
-  var tilde = require('tilde-expansion'), 
+  var tilde = require('tilde-expansion'),
       s3Credentials;
 
   tilde('~/.gallery-css-s3-credentials', function ( path ) {
@@ -88,7 +88,7 @@ module.exports = function(grunt) {
             dest: './'
           }
         ]
-      }      
+      }
     },
     connect: {
       server: {
