@@ -26,7 +26,7 @@ Read the [getting started guide](http://benschwarz.github.io/gallery-css#getting
 
 [![Gallery CSS screencast: Building advanced web componentry using only CSS](http://0.germanforblack.com/poster.png_20130506_153359.jpg)](http://benschwarz.github.io/gallery-css)
 
-I've [prepared a screencast](http://benschwarz.github.io/gallery-css) that will take you through how to build something like Gallery-css from scratch, theres tonnes of tiny details that I learnt myself while building it. Its $12, you'll learn and it'll help me keep building for the web. How good is that? 
+I've [prepared a screencast](http://benschwarz.github.io/gallery-css) that will take you through how to build something like Gallery-css from scratch, theres tonnes of tiny details that I learnt myself while building it. Its $15, you'll learn and it'll help me keep building for the web. How good is that? 
 
 ## Browser support
 

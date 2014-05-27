@@ -9,10 +9,12 @@
 }
 
 .gallery .item:first-of-type {
+  pointer-events: auto;
   position: static;
   opacity: 1;
 }
 .gallery .item {
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
