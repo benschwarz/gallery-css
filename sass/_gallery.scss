@@ -42,8 +42,8 @@
 }
 
 .gallery {
-	.item:first-of-type { pointer-events: auto; position: static; opacity: 1; } // Set the first item to be visible
-	.item { pointer-events: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .5s; }
+	.item:first-of-type { position: static; pointer-events: auto; opacity: 1; } // Set the first item to be visible
+	.item { position: absolute; top: 0; left: 0; width: 100%; height: 100%;  pointer-events: none; opacity: 0; transition: opacity .5s; }
 
 	.control-operator { display: none; } // Stop hash links from scrolling up and down
 
