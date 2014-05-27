@@ -19,14 +19,18 @@
 	  100% { opacity: 0; }
 	}
 
+	.gallery {
+		@for $j from 1 through $item-count {
+			.control-operator:nth-of-type(#{$j}):target ~ .item:nth-of-type(#{$j}) { pointer-events: auto; opacity: 1; }
+			.control-operator:nth-of-type(#{$j}):target ~ .controls .control-button:nth-of-type(#{$j}) { @extend %active-button; }
+		}
+	}
+
 	.items-#{$item-count} {
 		&.autoplay .control-button { animation: controlAnimation-#{$item-count} #{$total-duration}s infinite; }
 		&.autoplay .item { animation: galleryAnimation-#{$item-count} #{$total-duration}s infinite; }
 
 		@for $j from 1 through $item-count {
-			.control-operator:nth-of-type(#{$j}):target ~ .item:nth-of-type(#{$j}) { pointer-events: auto; opacity: 1; }
-			.control-operator:nth-of-type(#{$j}):target ~ .controls .control-button:nth-of-type(#{$j}) { @extend %active-button; }
-
 			.control-button:nth-of-type(#{$j}),
 			.item:nth-of-type(#{$j}) {
 				$delay: #{($j - 1) * ($display-duration) - $transition-duration}s;
