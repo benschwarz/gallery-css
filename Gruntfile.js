@@ -1,12 +1,19 @@
 /*global module:false*/
 module.exports = function(grunt) {
-
   var tilde = require('tilde-expansion'),
       s3Credentials;
 
-  tilde('~/.gallery-css-s3-credentials', function ( path ) {
-    s3Credentials = grunt.file.readJSON( path );
-  }),
+  try {
+    tilde('~/.gallery-css-s3-credentials', function ( path ) {
+      s3Credentials = grunt.file.readJSON( path );
+    });
+  } catch(e) {
+    console.log('no credentials found in ~/.gallery-css-s3-credentials.', 'Deployment won\'t be possible until amended');
+    s3Credentials = {
+      key: '',
+      secret: ''
+    }
+  }
 
   // Project configuration.
   grunt.initConfig({
