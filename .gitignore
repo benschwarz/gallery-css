@@ -16,5 +16,7 @@ results
 npm-debug.log
 node_modules
 
+.bower.json
+
 *.sass_cache
 *.scssc
