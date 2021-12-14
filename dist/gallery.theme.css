@@ -1,3 +1,6 @@
+/**
+ * Button colors
+ */
 .gallery .control-button {
   color: #ccc;
   color: rgba(255, 255, 255, 0.4);
@@ -8,14 +11,26 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-/*
-	Theme controls how everything looks in Gallery CSS.
-*/
+/**
+ * Theme controls how everything looks in Gallery CSS.
+ *
+ * @added  Responsive  2021-12-13 Thomas Fellinger
+ * 
+ * Calculate the padding by the image size:
+ * height/width=aspect_ratio
+ *
+ * use the first two numbers after the comma (on landscape images) as percentages
+ * 
+ * keep all images the same size to make it work
+ *
+ * @see  https://www.ankursheel.com/blog/full-width-you-tube-video-embed
+ */
 .gallery {
   position: relative;
+  padding-top:72.72%;
 }
 .gallery .item {
-  height: 400px;
+  height: 100%;
   overflow: hidden;
   text-align: center;
   background: #4d87e2;
@@ -25,12 +40,80 @@
   bottom: 0;
   width: 100%;
   text-align: center;
+  font-size: 6em;
+  line-height:0.5;
+  display:flex;
+  justify-content:center;
 }
 .gallery .control-button {
   display: inline-block;
   margin: 0 .02em;
-  font-size: 3em;
   text-align: center;
   text-decoration: none;
-  transition: color .1s;
+  transition: color 0.1s;
+}
+/**
+ * Prev/Next arrow navigation
+ *
+ * @added  secondary-controls  2021-12-13 Thomas Fellinger
+ *
+ * Every item has its own set of secondary controls
+ */
+.gallery .secondary-controls{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  pointer-events:none;
+  z-index:10;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+  -moz-box-align:center;
+  -ms-flex-align:center;
+  align-items:center;
+  -webkit-box-pack:justify;
+  -webkit-justify-content:space-between;
+  -moz-box-pack:justify;
+  -ms-flex-pack:justify;
+  justify-content:space-between;
+}
+.gallery .secondary-controls a{
+  display:block;
+  pointer-events: auto;
+  height:60px;
+  width:60px;
+  border-radius:60px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 3em;
+  font-weight:bold;
+  text-decoration:none;
+  text-align:center;
+  background:rgba(242, 242, 242, 0.5);
+  transition:all ease 250ms;
+  animation-delay:0;
+}
+.gallery .secondary-controls a:hover{
+  background:rgba(242, 242, 242, 0.9);
+}
+.gallery .secondary-controls a:nth-child(1){
+  margin-left:0.5em;
+}
+.gallery .secondary-controls a:nth-child(2){
+  margin-right:0.5em;
+}
+.gallery .secondary-controls img{
+  border-radius:60px;
+  display:block;
+  padding:2px 5px 2px 5px;
+}
+.gallery .secondary-controls a:nth-child(1) img{
+  padding-left:0;
+}
+.gallery .secondary-controls a:nth-child(2) img{
+  padding-right:0;
 }
